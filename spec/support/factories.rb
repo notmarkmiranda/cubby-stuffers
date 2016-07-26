@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :product do
     name
-    unit_price
+    price
 
     factory :product_with_items do
       transient do
