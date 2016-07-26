@@ -23,7 +23,9 @@ RSpec.feature "visitor can create an internal account" do
       click_on "Create Account"
 
       expect(current_path).to eq dashboard_path
-      expect(page).to have_content "Welcome, Neight!"
+      within "#flash_success" do
+        expect(page).to have_content "Welcome To Cubby Stuffers!"
+      end
     end
   end
 end
