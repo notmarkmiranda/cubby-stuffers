@@ -3,7 +3,8 @@
 </div>
 
 <%= form_for(:session, url: login_path, method: :post) do |f| %>
-  <div class="form-group">
+
+  <div class="form-group container">
     <h4>
       <%= f.label :email, "Email" %>
       <%= f.text_field :email, placeholder: "Enter Email", class: "form-control" %>
