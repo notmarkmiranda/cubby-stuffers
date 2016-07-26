@@ -2,18 +2,18 @@ require 'rails_helper'
 
 RSpec.feature "visitor can view products" do
   scenario "visitor can see product index" do
-    product = create(:product)
+    product = create(:product_with_items)
 
     visit products_path
 
     within "#products" do
       expect(page).to have_content(product.name)
-      expect(page).to have_content(product.item_names[0])
+      expect(page).to have_content(product.item_names)
     end
   end
 
   scenario "visitor can see product show page" do
-    product = create(:product)
+    product = create(:product_with_items)
 
     visit products_path
 
