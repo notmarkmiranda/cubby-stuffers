@@ -29,4 +29,22 @@ FactoryGirl.define do
     association :product
     association :item
   end
+
+  sequence(:first_name) { |n| "User first name #{n}" }
+  sequence(:last_name) { |n| "User last name #{n}" }
+  sequence(:email) { |n| "#{n}@example.com" }
+  sequence(:email_confirmation) { |n| "#{n}@example.com" }
+  sequence(:phone_number) { |n| "012-345-678#{n}" }
+
+  factory :user do
+    first_name
+    last_name
+    email 
+    email_confirmation
+    password "password"
+    password_confirmation "password"
+    phone_number
+    role 0
+  end
+
 end
