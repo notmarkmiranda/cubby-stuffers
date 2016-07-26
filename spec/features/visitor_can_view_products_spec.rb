@@ -22,7 +22,7 @@ RSpec.feature "visitor can view products" do
     expect(current_path).to eq(product_path(product))
 
     within "#product" do
-      expect(page).to have_content(product.items)
+      expect(page).to have_content(product.item_names)
       expect(page).to have_content(product.price)
     end
   end
