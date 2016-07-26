@@ -12,7 +12,7 @@ FactoryGirl.define do
       end
 
       after(:create) do |product, evaluator|
-        create_list(:item, evaluator.item_count, product: product)
+        create_list(:product_item, evaluator.item_count, product: product)
       end
     end
   end
@@ -23,5 +23,10 @@ FactoryGirl.define do
   factory :item do
     name { generate(:item_name) }
     description { generate(:item_description) }
+  end
+
+  factory :product_item do
+    association :product
+    association :item
   end
 end
