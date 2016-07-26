@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
       session[:user_id] = @user.id
       redirect_to session[:last_page]
     else
-      flash[:alert] = "Invalid. Try Again."
+      flash.now[:error] = "Invalid credentials"
       render :new
     end
   end
