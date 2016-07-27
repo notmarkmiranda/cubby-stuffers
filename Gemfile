@@ -30,6 +30,8 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'bootstrap-sass'
 gem 'figaro'
+# gem 'omniauth'
+# gem 'omniauth-oauth2'
 gem 'omniauth-github'
 
 group :development, :test do

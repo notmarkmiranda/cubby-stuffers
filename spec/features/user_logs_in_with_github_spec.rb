@@ -10,7 +10,7 @@ RSpec.feature "User logs in with GitHub" do
 
       expect(page.status_code).to eq 200
 
-      click_link "Sign in with GitHub"
+      click_button "Sign in with GitHub"
 
       expect(current_path).to eq "/"
       expect(page).to have_content "Cool Guy"
