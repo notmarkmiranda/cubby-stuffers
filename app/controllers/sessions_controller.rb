@@ -13,12 +13,17 @@ class SessionsController < ApplicationController
         flash.now[:error] = "Invalid credentials"
         render :new
       end
-    elsif @user = User.from_omniauth(request.env["omniauth.auth"])
-      session[:user_id] = @user.id
-      redirect_to root_path
+    elsif request.env["omniauth.auth"]
+      if @user = User.from_omniauth(request.env["omniauth.auth"])
+        session[:user_id] = @user.id
+        redirect_to root_path
+      else
+        flash[:error] = "Invalid Github. Do you already have an account with us?"
+        redirect_to login_path
+      end
     else
-      flash.now[:error] = "Invalid credentials"
-      render :new
+      flash[:error] = "Something went wrong"
+      render file: "public/404"
     end
   end
 
