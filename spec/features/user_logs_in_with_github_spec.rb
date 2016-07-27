@@ -5,7 +5,7 @@ RSpec.feature "User logs in with GitHub" do
     scenario "they are redirected to the homepage" do
       mock_auth_hash
 
-      visit '/login'
+      visit '/login' 
 
       expect(page.status_code).to eq 200
 
@@ -17,9 +17,10 @@ RSpec.feature "User logs in with GitHub" do
     end
   end
 
+
   context "when an internal account with that email exists" do
     scenario "and they are redirected to login path" do
-      user = create(:user, email: "coolguy@lithub.com", 
+      user = create(:user, email: "coolguy@lithub.com",
                     email_confirmation: "coolguy@lithub.com")
 
       mock_auth_hash

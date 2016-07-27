@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  root to: "products#index"
+  root to: "packages#index"
 
-  resources :products, only: [:index, :show]
+  resources :packages, only: [:index, :show]
   resources :users, only: [:new, :create, :show]
 
   get "/login", to: "sessions#new"

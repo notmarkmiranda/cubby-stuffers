@@ -25,7 +25,7 @@ RSpec.feature "User logs in" do
     end
 
     scenario "from the product index path" do
-      visit products_path
+      visit packages_path
 
       click_link "Login"
 
@@ -34,7 +34,7 @@ RSpec.feature "User logs in" do
 
       click_button "Sign in"
 
-      expect(current_path).to eq(products_path)
+      expect(current_path).to eq(packages_path)
 
       within("nav") do
         expect(page).to have_content("#{user.first_name}")

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160727014537) do
+ActiveRecord::Schema.define(version: 20160727210506) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,17 +22,17 @@ ActiveRecord::Schema.define(version: 20160727014537) do
     t.datetime "updated_at",  null: false
   end
 
-  create_table "product_items", force: :cascade do |t|
-    t.integer  "product_id"
+  create_table "package_items", force: :cascade do |t|
+    t.integer  "package_id"
     t.integer  "item_id"
     t.integer  "quantity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["item_id"], name: "index_product_items_on_item_id", using: :btree
-    t.index ["product_id"], name: "index_product_items_on_product_id", using: :btree
+    t.index ["item_id"], name: "index_package_items_on_item_id", using: :btree
+    t.index ["package_id"], name: "index_package_items_on_package_id", using: :btree
   end
 
-  create_table "products", force: :cascade do |t|
+  create_table "packages", force: :cascade do |t|
     t.string   "name"
     t.integer  "price"
     t.datetime "created_at", null: false
@@ -52,6 +52,6 @@ ActiveRecord::Schema.define(version: 20160727014537) do
     t.string   "oauth_token"
   end
 
-  add_foreign_key "product_items", "items"
-  add_foreign_key "product_items", "products"
+  add_foreign_key "package_items", "items"
+  add_foreign_key "package_items", "packages"
 end
