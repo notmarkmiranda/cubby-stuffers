@@ -1,11 +1,9 @@
 class User < ApplicationRecord
   has_secure_password validations: false, if: "uid"
-
   validates :email, confirmation: true, if: "uid.nil?", on: :create
   validates :email_confirmation, presence: true, if: "uid.nil?", on: :create
   validates :password, presence: true, confirmation: true, if: "uid.nil?", on: :create
   validates :password_confirmation, presence: true, if: "uid.nil?", on: :create
-
 
   def self.from_omniauth(auth_info)
     user = find_or_create_by(uid: auth_info[:uid]) do |new_user|
