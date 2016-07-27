@@ -23,19 +23,14 @@ module OmniauthMacros
     OmniAuth.config.test_mode = true
     OmniAuth.config.mock_auth[:github] = OmniAuth::AuthHash.new( {
       provider: 'github',
-            uid: "1234",
-            info: {
-              nickname: "Cool Guy",
+      uid: "1234",
+      info: {
+        name: "Cool Guy",
+        email: "coolguy@lithub.com"
             },
-            credentials: {
-              token: "pizza"
-            },
-            extra: {
-              raw_info: {
-                followers: 1,
-                following: 1
-              }
-            }
+      credentials: {
+        token: "pizza"
+                    },
     })
   end
 end
