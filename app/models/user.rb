@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   has_secure_password validations: false, if: "uid"
+  validates :email, uniqueness: true
   validates :email, confirmation: true, if: "uid.nil?", on: :create
   validates :email_confirmation, presence: true, if: "uid.nil?", on: :create
   validates :password, presence: true, confirmation: true, if: "uid.nil?", on: :create
