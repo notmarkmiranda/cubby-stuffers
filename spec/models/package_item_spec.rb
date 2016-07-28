@@ -1,5 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe PackageItem, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  context "validations" do
+     it { should validate_uniqueness_of(:quantity).scoped_to(:package_id, :item_id) }
+  end
 end
