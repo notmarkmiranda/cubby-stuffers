@@ -14,6 +14,8 @@ class User < ApplicationRecord
   validates :uid, uniqueness: true, if: "uid"
   validates :oauth_token, presence: true, if: "uid"
 
+  enum role: %w(default admin)
+
   def self.from_omniauth(auth_info)
     user = find_or_create_by(uid: auth_info[:uid]) do |new_user|
       new_user.uid = auth_info.uid
