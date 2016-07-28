@@ -10,4 +10,10 @@ RSpec.describe Package, type: :model do
     expect(package.item_names).to include "Peanut M&M's"
     expect(package.item_names).to include "Wheat Thins"
   end
+
+  context "validations" do
+     it { should validate_presence_of(:name) }
+     it { should validate_uniqueness_of(:name) }
+     it { should validate_presence_of(:price) }
+  end
 end
