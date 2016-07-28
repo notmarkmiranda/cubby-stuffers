@@ -1,18 +1,18 @@
 FactoryGirl.define do
-  sequence(:product_name) { |n| "Product name #{n}" }
+  sequence(:package_name) { |n| "Package name #{n}" }
   sequence(:price) { |n| 10 + n }
 
-  factory :product do
-    name { generate(:product_name) }
+  factory :package do
+    name { generate(:package_name) }
     price
 
-    factory :product_with_items do
+    factory :package_with_items do
       transient do
         item_count 3
       end
 
-      after(:create) do |product, evaluator|
-        create_list(:product_item, evaluator.item_count, product: product)
+      after(:create) do |package, evaluator|
+        create_list(:package_item, evaluator.item_count, package: package)
       end
     end
   end
@@ -25,8 +25,8 @@ FactoryGirl.define do
     description { generate(:item_description) }
   end
 
-  factory :product_item do
-    association :product
+  factory :package_item do
+    association :package
     association :item
   end
 
@@ -39,7 +39,7 @@ FactoryGirl.define do
   factory :user do
     first_name
     last_name
-    email 
+    email
     email_confirmation
     password "password"
     password_confirmation "password"
