@@ -4,6 +4,7 @@ class PackagesController < ApplicationController
   end
 
   def show
+    @subscription = Subscription.new
     @package = Package.find(params[:id])
   end
 end

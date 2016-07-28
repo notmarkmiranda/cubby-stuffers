@@ -3,6 +3,9 @@ Rails.application.routes.draw do
 
   resources :packages, only: [:index, :show]
   resources :users, only: [:new, :create, :show]
+  resources :subscriptions, only: [:create, :show]
+
+  resources :charges, only: [:new, :create]
 
   get "/login", to: "sessions#new"
   post "/login", to: "sessions#create"

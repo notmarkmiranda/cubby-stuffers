@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160727210506) do
+ActiveRecord::Schema.define(version: 20160728012214) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,6 +39,18 @@ ActiveRecord::Schema.define(version: 20160727210506) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "subscriptions", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "price"
+    t.string   "module"
+    t.integer  "weeks"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "package_id"
+    t.index ["package_id"], name: "index_subscriptions_on_package_id", using: :btree
+    t.index ["user_id"], name: "index_subscriptions_on_user_id", using: :btree
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
@@ -54,4 +66,6 @@ ActiveRecord::Schema.define(version: 20160727210506) do
 
   add_foreign_key "package_items", "items"
   add_foreign_key "package_items", "packages"
+  add_foreign_key "subscriptions", "packages"
+  add_foreign_key "subscriptions", "users"
 end

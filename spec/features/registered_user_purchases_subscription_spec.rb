@@ -9,11 +9,12 @@ RSpec.feature "Registered User Makes a Purchase", js: true do
 
       visit "/packages"
       click_on package.name
-      find(:select, from, options).find("1703", from, options).select_option
+      #find(:select, from, options).find("1703", from, options).select_option
+      select "1703", from: "Select Module" 
 
-      expect(page).to have_content "Weeks: 6"
+      #expect(page).to have_content "Weeks: 6"
 
-      click_on "SUBSCRIBE"
+      click_on "Pay with Card"
 
       sleep(2)
       stripe_iframe = all('iframe[name=stripe_checkout_app]').last
@@ -30,7 +31,7 @@ RSpec.feature "Registered User Makes a Purchase", js: true do
 
       expect(current_path).to eq subscription_path(subscription)
       expect(page).to have_content package.name
-      expect(page).to have_content package.description
+      expect(page).to have_content package.items.map(&:name).join(", ")
       expect(page).to have_content subscription.weeks
       expect(page).to have_content subscription.price
       expect(page).to have_content subscription.module
