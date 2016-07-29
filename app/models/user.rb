@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   has_many :subscriptions
+  has_one :cubby
 
   has_secure_password validations: false, if: "uid"
 
