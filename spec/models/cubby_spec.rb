@@ -15,7 +15,6 @@ RSpec.describe Cubby, type: :model do
   end
 
   context "validations" do
-    it { expect(cubby).to validate_presence_of(:user) }
     it { expect(cubby).to validate_presence_of(:location) }
     it { expect(cubby).to validate_presence_of(:column) }
     it { expect(cubby).to validate_presence_of(:row) }

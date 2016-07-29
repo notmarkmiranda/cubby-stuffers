@@ -1,7 +1,6 @@
 class Cubby < ApplicationRecord
   belongs_to :user
 
-  validates :user, presence: true
   validates :location, presence: true
   validates :column, presence: true
   validates :row, presence: true
