@@ -45,6 +45,43 @@ FactoryGirl.define do
     password_confirmation "password"
     phone_number
     role 0
+
+      factory :user_with_subscriptions do
+        transient do
+          subscription_count 1
+        end
+
+        after(:create) do |user, evaluator|
+          create_list(:subscription, evaluator.subscription_count, user: user)
+        end
+      end
+  end
+
+  sequence(:mod){ |n| "170#{n}" }
+
+  factory :subscription do
+    association :user
+    association :package
+    price 5
+    mod { generate(:mod) }
+    weeks 6
+
+    factory :subscription_with_fulfillments do
+      transient do
+        fulfillment_count 3
+      end
+
+      after(:create) do |subscription, evaluator|
+        create_list(:fulfillment, evaluator.fulfillment_count, subscription: subscription)
+      end
+    end
+  end
+
+  sequence(:week){ |n| n.to_s }
+
+  factory :fulfillment do
+    association :subscription
+    week { generate(:week)}
   end
 
 end

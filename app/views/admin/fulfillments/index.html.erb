@@ -1,0 +1,34 @@
+<h4>Pending Fulfillments</h4>
+
+  <table id="pending-fulfillments" class="table table-hover">
+    <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Cubby</th>
+      <th>Module</th>
+      <th>Week</th>
+      <th>Fulfilled?</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fulfillments.each do |fulfillment| %>
+      <tr>
+      <td><%= fulfillment.user.first_name %></td>
+      <td><%= fulfillment.user.last_name %></td>
+      <td>Cubby Location</td>
+      <td><%= fulfillment.subscription.mod %></td>
+      <td><%= fulfillment.week %></td>
+      <td>
+      <% if fulfillment.fulfilled? %>
+        Done
+      <% else %>
+        <%= link_to "Filled", admin_fulfillment_path(id: fulfillment, fulfill: "true"), method: :patch %>
+      <% end %>
+      </td>
+      </tr>
+    <% end %>
+  </tbody>
+  </table>

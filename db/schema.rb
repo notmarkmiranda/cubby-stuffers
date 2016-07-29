@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160728214539) do
+ActiveRecord::Schema.define(version: 20160729032004) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "fulfillments", force: :cascade do |t|
+    t.string   "week"
+    t.boolean  "fulfilled?",      default: false
+    t.integer  "subscription_id"
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+    t.index ["subscription_id"], name: "index_fulfillments_on_subscription_id", using: :btree
+  end
 
   create_table "items", force: :cascade do |t|
     t.string   "name"
@@ -42,7 +51,7 @@ ActiveRecord::Schema.define(version: 20160728214539) do
   create_table "subscriptions", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "price"
-    t.string   "module"
+    t.string   "mod"
     t.integer  "weeks"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -64,6 +73,7 @@ ActiveRecord::Schema.define(version: 20160728214539) do
     t.string   "oauth_token"
   end
 
+  add_foreign_key "fulfillments", "subscriptions"
   add_foreign_key "package_items", "items"
   add_foreign_key "package_items", "packages"
   add_foreign_key "subscriptions", "packages"
