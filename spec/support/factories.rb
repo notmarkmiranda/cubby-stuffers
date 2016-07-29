@@ -84,4 +84,10 @@ FactoryGirl.define do
     week { generate(:week)}
   end
 
+  factory :cubby do
+    user { build(:user) }
+    location "Big Workspace"
+    column "A"
+    row "1"
+  end
 end
