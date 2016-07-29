@@ -47,4 +47,10 @@ FactoryGirl.define do
     role 0
   end
 
+  factory :cubby do
+    user { build(:user) }
+    location "Big Workspace"
+    column "A"
+    row "1"
+  end
 end
