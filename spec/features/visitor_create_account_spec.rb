@@ -26,7 +26,7 @@ RSpec.feature "visitor can create an internal account" do
 
       expect(current_path).to eq new_user_cubby_path(User.last)
 
-      within "#flash_success" do
+      within ".alert" do
         expect(page).to have_content "Welcome To Cubby Stuffers!"
       end
 
@@ -44,7 +44,7 @@ RSpec.feature "visitor can create an internal account" do
 
       expect(current_path).to eq (dashboard_path)
 
-      within "#flash_success" do
+      within ".alert" do
         expect(page).to have_content "Sucessfully Registered Cubby!"
       end
 

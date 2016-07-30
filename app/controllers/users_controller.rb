@@ -11,7 +11,7 @@ class UsersController < ApplicationController
       flash[:success] = "Welcome To Cubby Stuffers!"
       redirect_to new_user_cubby_path(@user)
     else
-      flash.now[:error] = @user.errors.full_messages.join(", ")
+      flash.now[:danger] = @user.errors.full_messages.join(", ")
       render :new
     end
   end

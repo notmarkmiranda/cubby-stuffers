@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: "packages#index"
+  root to: "static_pages#splash"
 
   resources :packages, only: [:index, :show]
   resources :users, only: [:new, :create, :show] do

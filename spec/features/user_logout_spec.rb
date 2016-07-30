@@ -17,7 +17,7 @@ RSpec.feature "User logs out" do
 
     click_link "Logout"
 
-    within("#flash_notice") do
+    within(".alert") do
       expect(page).to have_content("Logged out successfully!")
     end
 

@@ -55,7 +55,7 @@ RSpec.feature "User logs in" do
 
       expect(current_path).to eq(login_path)
 
-      within "#flash_error" do
+      within ".alert" do
         expect(page).to have_content("Invalid credentials")
       end
 
