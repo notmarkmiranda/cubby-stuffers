@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
           session[:last_page] ? redirect_to(session[:last_page]) : redirect_to(login_path)
         end
       else
-        flash.now[:error] = "Invalid credentials"
+        flash.now[:danger] = "Invalid credentials"
         render :new
       end
     elsif request.env["omniauth.auth"]
@@ -22,18 +22,18 @@ class SessionsController < ApplicationController
         session[:user_id] = @user.id
         redirect_to root_path
       else
-        flash[:error] = "Invalid Github. Do you already have an account with us?"
+        flash[:danger] = "Invalid Github. Do you already have an account with us?"
         redirect_to login_path
       end
     else
-      flash[:error] = "Something went wrong"
+      flash[:danger] = "Something went wrong"
       render file: "public/404"
     end
   end
 
   def destroy
     session.clear
-    flash[:notice] = "Logged out successfully!"
+    flash[:success] = "Logged out successfully!"
     redirect_to login_path
   end
 end
