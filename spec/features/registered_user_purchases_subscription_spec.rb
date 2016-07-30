@@ -9,10 +9,7 @@ RSpec.feature "Registered User Makes a Purchase", js: true do
 
       visit "/packages"
       click_on package.name
-      #find(:select, from, options).find("1703", from, options).select_option
-      select "1703", from: "Select Module" 
-
-      #expect(page).to have_content "Weeks: 6"
+      select "1703", from: "Select Module"
 
       click_on "Pay with Card"
 
@@ -27,14 +24,14 @@ RSpec.feature "Registered User Makes a Purchase", js: true do
        sleep(10)
       end
 
-      subscription = Subscription.find(1)
+      subscription = Subscription.last
 
       expect(current_path).to eq subscription_path(subscription)
       expect(page).to have_content package.name
       expect(page).to have_content package.items.map(&:name).join(", ")
       expect(page).to have_content subscription.weeks
       expect(page).to have_content subscription.price
-      expect(page).to have_content subscription.module
+      expect(page).to have_content subscription.mod
     end
   end
 end

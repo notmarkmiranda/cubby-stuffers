@@ -2,16 +2,16 @@ class ChargesController < ApplicationController
 
   def new
   end
-  
+
   def create
     # Amount in cents
     @amount = 500
-  
+
     customer = Stripe::Customer.create(
       :email => params[:stripeEmail],
       :source  => params[:stripeToken]
     )
-  
+
     charge = Stripe::Charge.create(
       :customer    => customer.id,
       :amount      => @amount,
@@ -19,10 +19,8 @@ class ChargesController < ApplicationController
       :currency    => 'usd'
     )
 
-    new_sub = current_user.subscriptions.create(module: params[:module],
-                                                price: 5,
-                                                weeks: 6,
-                                                package_id: params[:package_id])
+    new_sub = SubscriptionHandler.new(current_user, params[:mod],
+                                      5, 6, params[:package_id]).create_subscription
     redirect_to subscription_path(new_sub)
 
   rescue Stripe::CardError => e
