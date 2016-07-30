@@ -2,10 +2,11 @@ require 'rails_helper'
 
 RSpec.feature "admin can see price comparison" do
   scenario "admin enters an item name query and it returns the item id" do
-
+    admin = create(:user, role: 'admin')
+    login_user(admin)
     visit "/admin/dashboard"
 
-    click_on "Price Comparison Tool"
+    click_link "Price Comparison Tool"
 
     expect(page).to have_content("Enter an item name:")
 
