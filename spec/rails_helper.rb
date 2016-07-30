@@ -16,6 +16,12 @@ def login_user(user)
   click_button "Sign in"
 end
 
+VCR.configure do |c|
+  c.cassette_library_dir = 'spec/cassettes'
+  c.hook_into :webmock
+  c.configure_rspec_metadata!
+end
+
 module OmniauthMacros
   def mock_auth_hash
     OmniAuth.config.test_mode = true
