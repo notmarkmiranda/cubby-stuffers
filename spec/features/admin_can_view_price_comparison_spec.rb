@@ -6,16 +6,14 @@ RSpec.feature "admin can see price comparison" do
     login_user(admin)
     visit "/admin/dashboard"
 
-    click_link "Price Comparison Tool"
-
-    expect(page).to have_content("Enter an item name:")
-
-    fill_in "Item", with: "blue diamond almonds"
+    fill_in "Enter Item Name:", with: "blue diamond almonds"
 
     click_on "Search"
 
-    within ".items_table" do
+    expect(current_path).to eq admin_price_comparison_path
+
+    within ".price_comparison_table" do
       expect(page).to have_content("45595112")
-    end
+    end    
   end
 end

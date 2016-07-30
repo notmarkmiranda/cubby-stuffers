@@ -4,7 +4,7 @@ class WalmartService
     @_connection = Faraday.new("https://api.walmartlabs.com")
   end
 
-  def get_item_ids(item)
+  def get_products(item)
     response = connection.get do |req|
       req.url "/v1/search"
       req.params['apiKey'] = ENV["WALMART_API_KEY"]
@@ -18,8 +18,6 @@ class WalmartService
   def parse(response)
     JSON.parse(response.body, symbolize_names: true)
   end
-
-
 
   private
     def connection

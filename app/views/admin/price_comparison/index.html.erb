@@ -1,16 +1,22 @@
 <h1>Price Comparison</h1>
+
+
 <table class="price_comparison_table">
    <thead>
     <tr>
-      <th>Item Id</th>
-      <th>Item Price</th>
+      <th>Image</th>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Price</th>
     </tr>
   </thead>
 
   <% @walmart_products.each do |walmart_product| %>
     <tr>
-      <td><%= walmart_product.id %></td>
-      <td><%= walmart_product.price %></td>
+      <td><%= image_tag walmart_product.image_path %></td>
+      <td><%= walmart_product.walmart_id %></td>
+      <td><%= walmart_product.name %></td>
+      <td>$<%= walmart_product.price %></td>
     </tr>
   <% end %>
 </table>
