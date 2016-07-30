@@ -31,7 +31,7 @@ RSpec.feature "User logs in with GitHub" do
 
       expect(current_path).to eq "/login"
 
-      within "#flash_error" do
+      within ".alert" do
         expect(page).to have_content "Invalid Github. Do you already have an account with us?"
       end
     end
