@@ -264,6 +264,7 @@ DEPENDENCIES
   byebug
   capybara
   coffee-rails (~> 4.2)
+  crack
   database_cleaner
   factory_girl_rails
   figaro
