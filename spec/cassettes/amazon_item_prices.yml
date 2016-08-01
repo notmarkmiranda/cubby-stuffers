@@ -1,0 +1,262 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://webservices.amazon.com/onca/xml?AWSAccessKeyId=AKIAJ3BXPLLMU6Z2S4QA&AssociateTag=cubbystuffers-20&IdType=UPC&ItemId=041570109489&Operation=ItemLookup&ResponseGroup=Large&SearchIndex=All&Service=AWSECommerceService&Signature=sGre72rcnIZ%2BP5Nw//PbEm4vFphT5LAvwr6IUfEfkg8=&Timestamp=2016-07-31T22:12:57Z
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 31 Jul 2016 22:12:57 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - text/xml;charset=UTF-8
+      Vary:
+      - Accept-Encoding,User-Agent
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: <?xml version="1.0" ?><ItemLookupResponse xmlns="http://webservices.amazon.com/AWSECommerceService/2011-08-01"><OperationRequest><HTTPHeaders><Header
+        Name="UserAgent" Value="Faraday v0.9.2"></Header></HTTPHeaders><RequestId>648dbdde-5b6a-4c2c-a20a-f850cc0d0bac</RequestId><Arguments><Argument
+        Name="AWSAccessKeyId" Value="AKIAJ3BXPLLMU6Z2S4QA"></Argument><Argument Name="AssociateTag"
+        Value="cubbystuffers-20"></Argument><Argument Name="IdType" Value="UPC"></Argument><Argument
+        Name="ItemId" Value="041570109489"></Argument><Argument Name="Operation" Value="ItemLookup"></Argument><Argument
+        Name="ResponseGroup" Value="Large"></Argument><Argument Name="SearchIndex"
+        Value="All"></Argument><Argument Name="Service" Value="AWSECommerceService"></Argument><Argument
+        Name="Signature" Value="sGre72rcnIZ+P5Nw//PbEm4vFphT5LAvwr6IUfEfkg8="></Argument><Argument
+        Name="Timestamp" Value="2016-07-31T22:12:57Z"></Argument></Arguments><RequestProcessingTime>0.0740189170000000</RequestProcessingTime></OperationRequest><Items><Request><IsValid>True</IsValid><ItemLookupRequest><IdType>UPC</IdType><ItemId>041570109489</ItemId><ResponseGroup>Large</ResponseGroup><SearchIndex>All</SearchIndex><VariationPage>All</VariationPage></ItemLookupRequest></Request><Item><ASIN>B00DY8DBX8</ASIN><DetailPageURL>http://www.amazon.com/Blue-Diamond-Almonds-Salted-Caramel/dp/B00DY8DBX8%3FSubscriptionId%3DAKIAJ3BXPLLMU6Z2S4QA%26tag%3Dcubbystuffers-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB00DY8DBX8</DetailPageURL><ItemLinks><ItemLink><Description>Technical
+        Details</Description><URL>http://www.amazon.com/Blue-Diamond-Almonds-Salted-Caramel/dp/tech-data/B00DY8DBX8%3FSubscriptionId%3DAKIAJ3BXPLLMU6Z2S4QA%26tag%3Dcubbystuffers-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00DY8DBX8</URL></ItemLink><ItemLink><Description>Add
+        To Baby Registry</Description><URL>http://www.amazon.com/gp/registry/baby/add-item.html%3Fasin.0%3DB00DY8DBX8%26SubscriptionId%3DAKIAJ3BXPLLMU6Z2S4QA%26tag%3Dcubbystuffers-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00DY8DBX8</URL></ItemLink><ItemLink><Description>Add
+        To Wedding Registry</Description><URL>http://www.amazon.com/gp/registry/wedding/add-item.html%3Fasin.0%3DB00DY8DBX8%26SubscriptionId%3DAKIAJ3BXPLLMU6Z2S4QA%26tag%3Dcubbystuffers-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00DY8DBX8</URL></ItemLink><ItemLink><Description>Add
+        To Wishlist</Description><URL>http://www.amazon.com/gp/registry/wishlist/add-item.html%3Fasin.0%3DB00DY8DBX8%26SubscriptionId%3DAKIAJ3BXPLLMU6Z2S4QA%26tag%3Dcubbystuffers-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00DY8DBX8</URL></ItemLink><ItemLink><Description>Tell
+        A Friend</Description><URL>http://www.amazon.com/gp/pdp/taf/B00DY8DBX8%3FSubscriptionId%3DAKIAJ3BXPLLMU6Z2S4QA%26tag%3Dcubbystuffers-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00DY8DBX8</URL></ItemLink><ItemLink><Description>All
+        Customer Reviews</Description><URL>http://www.amazon.com/review/product/B00DY8DBX8%3FSubscriptionId%3DAKIAJ3BXPLLMU6Z2S4QA%26tag%3Dcubbystuffers-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00DY8DBX8</URL></ItemLink><ItemLink><Description>All
+        Offers</Description><URL>http://www.amazon.com/gp/offer-listing/B00DY8DBX8%3FSubscriptionId%3DAKIAJ3BXPLLMU6Z2S4QA%26tag%3Dcubbystuffers-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00DY8DBX8</URL></ItemLink></ItemLinks><SalesRank>97015</SalesRank><SmallImage><URL>http://ecx.images-amazon.com/images/I/51fDJ0SFPgL._SL75_.jpg</URL><Height
+        Units="pixels">68</Height><Width Units="pixels">75</Width></SmallImage><MediumImage><URL>http://ecx.images-amazon.com/images/I/51fDJ0SFPgL._SL160_.jpg</URL><Height
+        Units="pixels">144</Height><Width Units="pixels">160</Width></MediumImage><LargeImage><URL>http://ecx.images-amazon.com/images/I/51fDJ0SFPgL.jpg</URL><Height
+        Units="pixels">405</Height><Width Units="pixels">450</Width></LargeImage><ImageSets><ImageSet
+        Category="primary"><SwatchImage><URL>http://ecx.images-amazon.com/images/I/51fDJ0SFPgL._SL30_.jpg</URL><Height
+        Units="pixels">27</Height><Width Units="pixels">30</Width></SwatchImage><SmallImage><URL>http://ecx.images-amazon.com/images/I/51fDJ0SFPgL._SL75_.jpg</URL><Height
+        Units="pixels">68</Height><Width Units="pixels">75</Width></SmallImage><ThumbnailImage><URL>http://ecx.images-amazon.com/images/I/51fDJ0SFPgL._SL75_.jpg</URL><Height
+        Units="pixels">68</Height><Width Units="pixels">75</Width></ThumbnailImage><TinyImage><URL>http://ecx.images-amazon.com/images/I/51fDJ0SFPgL._SL110_.jpg</URL><Height
+        Units="pixels">99</Height><Width Units="pixels">110</Width></TinyImage><MediumImage><URL>http://ecx.images-amazon.com/images/I/51fDJ0SFPgL._SL160_.jpg</URL><Height
+        Units="pixels">144</Height><Width Units="pixels">160</Width></MediumImage><LargeImage><URL>http://ecx.images-amazon.com/images/I/51fDJ0SFPgL.jpg</URL><Height
+        Units="pixels">405</Height><Width Units="pixels">450</Width></LargeImage></ImageSet></ImageSets><ItemAttributes><Binding>Grocery</Binding><Brand>Blue
+        Diamond Almonds</Brand><EAN>0041570109489</EAN><EANList><EANListElement>0041570109489</EANListElement></EANList><Feature>Oven
+        roasted almonds paired with the buttery sweetness of caramel</Feature><Feature>Irresistible
+        snacking</Feature><Feature>Tasty snack, great for sharing and dipping</Feature><Feature>4g
+        net carbs per serving</Feature><Feature>0 trans fat</Feature><IsAdultProduct>0</IsAdultProduct><ItemDimensions><Length
+        Units="inches">5</Length><Weight Units="hundredths-pounds">38</Weight></ItemDimensions><Label>Blue
+        Diamond Growers</Label><LegalDisclaimer>Buy TWO Get ONE FREE!* New flavor
+        dated APRIL 2017 available ONLY for a LIMITED TIME. (*when combined in a single
+        shipment)</LegalDisclaimer><Manufacturer>Blue Diamond Growers</Manufacturer><NumberOfItems>1</NumberOfItems><PackageDimensions><Height
+        Units="hundredths-inches">240</Height><Length Units="hundredths-inches">340</Length><Weight
+        Units="hundredths-pounds">50</Weight><Width Units="hundredths-inches">320</Width></PackageDimensions><PackageQuantity>1</PackageQuantity><ProductGroup>Grocery</ProductGroup><ProductTypeName>GROCERY</ProductTypeName><PublicationDate>2015-08-04</PublicationDate><Publisher>Blue
+        Diamond Growers</Publisher><ReleaseDate>2015-08-04</ReleaseDate><Size>6 Ounce</Size><Studio>Blue
+        Diamond Growers</Studio><Title>Blue Diamond Almonds, Salted Caramel, 6 Ounce</Title><UPC>041570109489</UPC><UPCList><UPCListElement>041570109489</UPCListElement></UPCList></ItemAttributes><OfferSummary><LowestNewPrice><Amount>340</Amount><CurrencyCode>USD</CurrencyCode><FormattedPrice>$3.40</FormattedPrice></LowestNewPrice><TotalNew>9</TotalNew><TotalUsed>0</TotalUsed><TotalCollectible>0</TotalCollectible><TotalRefurbished>0</TotalRefurbished></OfferSummary><Offers><TotalOffers>1</TotalOffers><TotalOfferPages>1</TotalOfferPages><MoreOffersUrl>http://www.amazon.com/gp/offer-listing/B00DY8DBX8%3FSubscriptionId%3DAKIAJ3BXPLLMU6Z2S4QA%26tag%3Dcubbystuffers-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00DY8DBX8</MoreOffersUrl><Offer><OfferAttributes><Condition>New</Condition></OfferAttributes><OfferListing><OfferListingId>BZ2Ja%2FsZN0U%2FtRH6jPtmEHK7077yVqpUnvnCyw5ohUTHdnfYnaSpuJ0xTUF8D4cjaSR0tYExpEBZ5iPvrnYXCSYZJVORpmuSKTKr0GWonYIKGzUM2zDxxUBooHeSsi1Qaeh7apn0%2BC8zJ6atIJLtVA%3D%3D</OfferListingId><Price><Amount>832</Amount><CurrencyCode>USD</CurrencyCode><FormattedPrice>$8.32</FormattedPrice></Price><Availability>Usually
+        ships in 24 hours</Availability><AvailabilityAttributes><AvailabilityType>now</AvailabilityType><MinimumHours>0</MinimumHours><MaximumHours>0</MaximumHours></AvailabilityAttributes><IsEligibleForSuperSaverShipping>0</IsEligibleForSuperSaverShipping><IsEligibleForPrime>1</IsEligibleForPrime></OfferListing></Offer></Offers><CustomerReviews><IFrameURL>http://www.amazon.com/reviews/iframe?akid=AKIAJ3BXPLLMU6Z2S4QA&amp;alinkCode=xm2&amp;asin=B00DY8DBX8&amp;atag=cubbystuffers-20&amp;exp=2016-08-01T22%3A12%3A57Z&amp;v=2&amp;sig=fg5RT9HtnMJ24Co%2FYTj781A1s7AmA%2F%2BxRxsJKuVY1PA%3D</IFrameURL><HasReviews>true</HasReviews></CustomerReviews><EditorialReviews><EditorialReview><Source>Product
+        Description</Source><Content>This is one of those snacks we predict will disappear
+        quickly.  So good ahead and enjoy the crunch of these oven-roasted almonds.  The
+        flavor-packed combination is also a good source of protein to help you get
+        up and go</Content><IsLinkSuppressed>0</IsLinkSuppressed></EditorialReview></EditorialReviews><SimilarProducts><SimilarProduct><ASIN>B00JIHGXM0</ASIN><Title>Blue
+        Diamond Almonds, Honey Roasted Cinnamon, 6 Ounce</Title></SimilarProduct><SimilarProduct><ASIN>B00JIGKKXY</ASIN><Title>Blue
+        Diamond Almonds, Honey Roasted Vanilla, 6 Ounce</Title></SimilarProduct><SimilarProduct><ASIN>B005KU9C5Y</ASIN><Title>Blue
+        Diamond Almonds, Honey Dijon, 6 Ounce</Title></SimilarProduct><SimilarProduct><ASIN>B00H3T9AY8</ASIN><Title>Blue
+        Diamond Almonds, Toasted Coconut, 14 Ounce</Title></SimilarProduct><SimilarProduct><ASIN>B007RNN6PE</ASIN><Title>Blue
+        Diamond Flavored Almonds, Toasted Coconut 6-ounce Can (Pack of 2)</Title></SimilarProduct></SimilarProducts><BrowseNodes><BrowseNode><BrowseNodeId>16322891</BrowseNodeId><Name>Almonds</Name><Ancestors><BrowseNode><BrowseNodeId>16322881</BrowseNodeId><Name>Nuts
+        &amp; Seeds</Name><Ancestors><BrowseNode><BrowseNodeId>16310221</BrowseNodeId><Name>Cooking
+        &amp; Baking</Name><Ancestors><BrowseNode><BrowseNodeId>16310211</BrowseNodeId><Name>Categories</Name><IsCategoryRoot>1</IsCategoryRoot><Ancestors><BrowseNode><BrowseNodeId>16310101</BrowseNodeId><Name>Grocery
+        &amp; Gourmet Food</Name></BrowseNode></Ancestors></BrowseNode></Ancestors></BrowseNode></Ancestors></BrowseNode></Ancestors></BrowseNode></BrowseNodes></Item><Item><ASIN>B00TJ31RRO</ASIN><DetailPageURL>http://www.amazon.com/Blue-Diamond-Almonds-Salted-Caramel-Flavored-Pack/dp/B00TJ31RRO%3FSubscriptionId%3DAKIAJ3BXPLLMU6Z2S4QA%26tag%3Dcubbystuffers-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB00TJ31RRO</DetailPageURL><ItemLinks><ItemLink><Description>Technical
+        Details</Description><URL>http://www.amazon.com/Blue-Diamond-Almonds-Salted-Caramel-Flavored-Pack/dp/tech-data/B00TJ31RRO%3FSubscriptionId%3DAKIAJ3BXPLLMU6Z2S4QA%26tag%3Dcubbystuffers-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00TJ31RRO</URL></ItemLink><ItemLink><Description>Add
+        To Baby Registry</Description><URL>http://www.amazon.com/gp/registry/baby/add-item.html%3Fasin.0%3DB00TJ31RRO%26SubscriptionId%3DAKIAJ3BXPLLMU6Z2S4QA%26tag%3Dcubbystuffers-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00TJ31RRO</URL></ItemLink><ItemLink><Description>Add
+        To Wedding Registry</Description><URL>http://www.amazon.com/gp/registry/wedding/add-item.html%3Fasin.0%3DB00TJ31RRO%26SubscriptionId%3DAKIAJ3BXPLLMU6Z2S4QA%26tag%3Dcubbystuffers-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00TJ31RRO</URL></ItemLink><ItemLink><Description>Add
+        To Wishlist</Description><URL>http://www.amazon.com/gp/registry/wishlist/add-item.html%3Fasin.0%3DB00TJ31RRO%26SubscriptionId%3DAKIAJ3BXPLLMU6Z2S4QA%26tag%3Dcubbystuffers-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00TJ31RRO</URL></ItemLink><ItemLink><Description>Tell
+        A Friend</Description><URL>http://www.amazon.com/gp/pdp/taf/B00TJ31RRO%3FSubscriptionId%3DAKIAJ3BXPLLMU6Z2S4QA%26tag%3Dcubbystuffers-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00TJ31RRO</URL></ItemLink><ItemLink><Description>All
+        Customer Reviews</Description><URL>http://www.amazon.com/review/product/B00TJ31RRO%3FSubscriptionId%3DAKIAJ3BXPLLMU6Z2S4QA%26tag%3Dcubbystuffers-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00TJ31RRO</URL></ItemLink><ItemLink><Description>All
+        Offers</Description><URL>http://www.amazon.com/gp/offer-listing/B00TJ31RRO%3FSubscriptionId%3DAKIAJ3BXPLLMU6Z2S4QA%26tag%3Dcubbystuffers-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00TJ31RRO</URL></ItemLink></ItemLinks><SalesRank>98071</SalesRank><SmallImage><URL>http://ecx.images-amazon.com/images/I/61Qw6-PVfRL._SL75_.jpg</URL><Height
+        Units="pixels">60</Height><Width Units="pixels">75</Width></SmallImage><MediumImage><URL>http://ecx.images-amazon.com/images/I/61Qw6-PVfRL._SL160_.jpg</URL><Height
+        Units="pixels">129</Height><Width Units="pixels">160</Width></MediumImage><LargeImage><URL>http://ecx.images-amazon.com/images/I/61Qw6-PVfRL.jpg</URL><Height
+        Units="pixels">403</Height><Width Units="pixels">500</Width></LargeImage><ImageSets><ImageSet
+        Category="variant"><SwatchImage><URL>http://ecx.images-amazon.com/images/I/61LDheFhAUL._SL30_.jpg</URL><Height
+        Units="pixels">24</Height><Width Units="pixels">30</Width></SwatchImage><SmallImage><URL>http://ecx.images-amazon.com/images/I/61LDheFhAUL._SL75_.jpg</URL><Height
+        Units="pixels">60</Height><Width Units="pixels">75</Width></SmallImage><ThumbnailImage><URL>http://ecx.images-amazon.com/images/I/61LDheFhAUL._SL75_.jpg</URL><Height
+        Units="pixels">60</Height><Width Units="pixels">75</Width></ThumbnailImage><TinyImage><URL>http://ecx.images-amazon.com/images/I/61LDheFhAUL._SL110_.jpg</URL><Height
+        Units="pixels">88</Height><Width Units="pixels">110</Width></TinyImage><MediumImage><URL>http://ecx.images-amazon.com/images/I/61LDheFhAUL._SL160_.jpg</URL><Height
+        Units="pixels">128</Height><Width Units="pixels">160</Width></MediumImage><LargeImage><URL>http://ecx.images-amazon.com/images/I/61LDheFhAUL.jpg</URL><Height
+        Units="pixels">400</Height><Width Units="pixels">500</Width></LargeImage></ImageSet><ImageSet
+        Category="primary"><SwatchImage><URL>http://ecx.images-amazon.com/images/I/61Qw6-PVfRL._SL30_.jpg</URL><Height
+        Units="pixels">24</Height><Width Units="pixels">30</Width></SwatchImage><SmallImage><URL>http://ecx.images-amazon.com/images/I/61Qw6-PVfRL._SL75_.jpg</URL><Height
+        Units="pixels">60</Height><Width Units="pixels">75</Width></SmallImage><ThumbnailImage><URL>http://ecx.images-amazon.com/images/I/61Qw6-PVfRL._SL75_.jpg</URL><Height
+        Units="pixels">60</Height><Width Units="pixels">75</Width></ThumbnailImage><TinyImage><URL>http://ecx.images-amazon.com/images/I/61Qw6-PVfRL._SL110_.jpg</URL><Height
+        Units="pixels">89</Height><Width Units="pixels">110</Width></TinyImage><MediumImage><URL>http://ecx.images-amazon.com/images/I/61Qw6-PVfRL._SL160_.jpg</URL><Height
+        Units="pixels">129</Height><Width Units="pixels">160</Width></MediumImage><LargeImage><URL>http://ecx.images-amazon.com/images/I/61Qw6-PVfRL.jpg</URL><Height
+        Units="pixels">403</Height><Width Units="pixels">500</Width></LargeImage></ImageSet></ImageSets><ItemAttributes><Binding>Misc.</Binding><Brand>Blue
+        Diamond Almonds</Brand><EAN>0041570109489</EAN><EANList><EANListElement>0041570109489</EANListElement></EANList><Feature>Irresistible
+        Snacking; Smart Eating!</Feature><Feature>4 grams of net carbs per serving</Feature><Feature>Almonds
+        are among the richest sources of health-benefiting nutrients essential for
+        optimum health</Feature><Label>Blue Diamond</Label><Manufacturer>Blue Diamond</Manufacturer><PackageDimensions><Height
+        Units="hundredths-inches">260</Height><Length Units="hundredths-inches">780</Length><Weight
+        Units="hundredths-pounds">195</Weight><Width Units="hundredths-inches">640</Width></PackageDimensions><PackageQuantity>4</PackageQuantity><ProductGroup>Grocery</ProductGroup><ProductTypeName>GROCERY</ProductTypeName><Publisher>Blue
+        Diamond</Publisher><Size>6 oz.</Size><Studio>Blue Diamond</Studio><Title>Blue
+        Diamond Almonds-Salted Caramel Flavored-Pack of 4</Title><UPC>041570109489</UPC><UPCList><UPCListElement>041570109489</UPCListElement></UPCList></ItemAttributes><OfferSummary><LowestNewPrice><Amount>2388</Amount><CurrencyCode>USD</CurrencyCode><FormattedPrice>$23.88</FormattedPrice></LowestNewPrice><TotalNew>3</TotalNew><TotalUsed>0</TotalUsed><TotalCollectible>0</TotalCollectible><TotalRefurbished>0</TotalRefurbished></OfferSummary><Offers><TotalOffers>1</TotalOffers><TotalOfferPages>1</TotalOfferPages><MoreOffersUrl>http://www.amazon.com/gp/offer-listing/B00TJ31RRO%3FSubscriptionId%3DAKIAJ3BXPLLMU6Z2S4QA%26tag%3Dcubbystuffers-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00TJ31RRO</MoreOffersUrl><Offer><OfferAttributes><Condition>New</Condition></OfferAttributes><OfferListing><OfferListingId>BZ2Ja%2FsZN0U%2FtRH6jPtmEP1J9Cjql1hBI9ONL9i16Znz64vrBA3wqxwBExr9jLrJTQWobtVT09kV1H9sr354HrnMXsfAejJdEAU4dTY0Yd4QFRa0DLotwuMGe%2FhcbEBk9gV%2FGRbCv7JLdrFr6uoEcfEzYJvUkzLO</OfferListingId><Price><Amount>2388</Amount><CurrencyCode>USD</CurrencyCode><FormattedPrice>$23.88</FormattedPrice></Price><Availability>Usually
+        ships in 24 hours</Availability><AvailabilityAttributes><AvailabilityType>now</AvailabilityType><MinimumHours>0</MinimumHours><MaximumHours>0</MaximumHours></AvailabilityAttributes><IsEligibleForSuperSaverShipping>0</IsEligibleForSuperSaverShipping><IsEligibleForPrime>1</IsEligibleForPrime></OfferListing></Offer></Offers><CustomerReviews><IFrameURL>http://www.amazon.com/reviews/iframe?akid=AKIAJ3BXPLLMU6Z2S4QA&amp;alinkCode=xm2&amp;asin=B00TJ31RRO&amp;atag=cubbystuffers-20&amp;exp=2016-08-01T22%3A12%3A57Z&amp;v=2&amp;sig=gqcOCUWFG65wHEhZPMuWiPVMnLJi2QIeKIy0Ye9%2BZIg%3D</IFrameURL><HasReviews>false</HasReviews></CustomerReviews><EditorialReviews><EditorialReview><Source>Product
+        Description</Source><Content>These salted caramel Blue Diamond almonds are
+        fantastic. You will love the taste. Almonds are gluten free and therefore
+        are one of the popular ingredients employed in the preparation of gluten-free
+        food formulas. Such formula preparations are, in fact, healthy alternatives
+        in people with wheat food allergy, and Celiac disease. Buy this healthy snack
+        today.</Content><IsLinkSuppressed>0</IsLinkSuppressed></EditorialReview></EditorialReviews><SimilarProducts><SimilarProduct><ASIN>B0139ZUSEU</ASIN><Title>Blue
+        Diamond Dark Chocolate Flavored Oven Roasted Almonds, 25 Oz</Title></SimilarProduct><SimilarProduct><ASIN>B00NLS9DV0</ASIN><Title>Blue
+        Diamond Toasted Coconut Oven Roasted Almonds (Pack of 2)</Title></SimilarProduct><SimilarProduct><ASIN>B00H3T9AY8</ASIN><Title>Blue
+        Diamond Almonds, Toasted Coconut, 14 Ounce</Title></SimilarProduct><SimilarProduct><ASIN>B004HOLDH4</ASIN><Title>Blue
+        Diamond Almonds, Roasted Salted, 16 Ounce (Pack of 3)</Title></SimilarProduct><SimilarProduct><ASIN>B00EFZHS2Y</ASIN><Title>Blue
+        Diamond Almonds BOLD Variety Pack of 4 x 6oz Cans Lime 'n Chili, Habanero
+        BBQ, Jalapeno Smokehouse, Wasabi &amp; Soy Sauce</Title></SimilarProduct></SimilarProducts><BrowseNodes><BrowseNode><BrowseNodeId>11437481011</BrowseNodeId><Name>Nuts
+        &amp; Seeds</Name><Children><BrowseNode><BrowseNodeId>16322891</BrowseNodeId><Name>Almonds</Name></BrowseNode><BrowseNode><BrowseNodeId>8975266011</BrowseNodeId><Name>Brazil</Name></BrowseNode><BrowseNode><BrowseNodeId>16322901</BrowseNodeId><Name>Cashews</Name></BrowseNode><BrowseNode><BrowseNodeId>6492300011</BrowseNodeId><Name>Hazelnuts</Name></BrowseNode><BrowseNode><BrowseNodeId>16322921</BrowseNodeId><Name>Macadamia
+        Nuts</Name></BrowseNode><BrowseNode><BrowseNodeId>16322931</BrowseNodeId><Name>Mixed
+        Nuts</Name></BrowseNode><BrowseNode><BrowseNodeId>16322941</BrowseNodeId><Name>Peanuts</Name></BrowseNode><BrowseNode><BrowseNodeId>370408011</BrowseNodeId><Name>Pecans</Name></BrowseNode><BrowseNode><BrowseNodeId>16322951</BrowseNodeId><Name>Pistachio
+        Nuts</Name></BrowseNode><BrowseNode><BrowseNodeId>16322961</BrowseNodeId><Name>Pumpkin
+        Seeds</Name></BrowseNode><BrowseNode><BrowseNodeId>8980430011</BrowseNodeId><Name>Soy
+        Nuts</Name></BrowseNode><BrowseNode><BrowseNodeId>16322971</BrowseNodeId><Name>Sunflower
+        Seeds</Name></BrowseNode><BrowseNode><BrowseNodeId>16322981</BrowseNodeId><Name>Walnuts</Name></BrowseNode></Children><Ancestors><BrowseNode><BrowseNodeId>16322721</BrowseNodeId><Name>Snack
+        Foods</Name><Ancestors><BrowseNode><BrowseNodeId>16310211</BrowseNodeId><Name>Categories</Name><IsCategoryRoot>1</IsCategoryRoot><Ancestors><BrowseNode><BrowseNodeId>16310101</BrowseNodeId><Name>Grocery
+        &amp; Gourmet Food</Name></BrowseNode></Ancestors></BrowseNode></Ancestors></BrowseNode></Ancestors></BrowseNode><BrowseNode><BrowseNodeId>9865381011</BrowseNodeId><Name>Almonds</Name><Ancestors><BrowseNode><BrowseNodeId>9865380011</BrowseNodeId><Name>Nuts</Name><Ancestors><BrowseNode><BrowseNodeId>9865378011</BrowseNodeId><Name>Nuts,
+        Seeds &amp; Snack Mix</Name><Ancestors><BrowseNode><BrowseNodeId>6506977011</BrowseNodeId><Name>Produce</Name><Ancestors><BrowseNode><BrowseNodeId>16310211</BrowseNodeId><Name>Categories</Name><IsCategoryRoot>1</IsCategoryRoot><Ancestors><BrowseNode><BrowseNodeId>16310101</BrowseNodeId><Name>Grocery
+        &amp; Gourmet Food</Name></BrowseNode></Ancestors></BrowseNode></Ancestors></BrowseNode></Ancestors></BrowseNode></Ancestors></BrowseNode></Ancestors></BrowseNode></BrowseNodes></Item><Item><ASIN>B018FRYU5A</ASIN><DetailPageURL>http://www.amazon.com/Blue-Diamond-Almonds-Salted-Caramel/dp/B018FRYU5A%3FSubscriptionId%3DAKIAJ3BXPLLMU6Z2S4QA%26tag%3Dcubbystuffers-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB018FRYU5A</DetailPageURL><ItemLinks><ItemLink><Description>Technical
+        Details</Description><URL>http://www.amazon.com/Blue-Diamond-Almonds-Salted-Caramel/dp/tech-data/B018FRYU5A%3FSubscriptionId%3DAKIAJ3BXPLLMU6Z2S4QA%26tag%3Dcubbystuffers-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB018FRYU5A</URL></ItemLink><ItemLink><Description>Add
+        To Baby Registry</Description><URL>http://www.amazon.com/gp/registry/baby/add-item.html%3Fasin.0%3DB018FRYU5A%26SubscriptionId%3DAKIAJ3BXPLLMU6Z2S4QA%26tag%3Dcubbystuffers-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB018FRYU5A</URL></ItemLink><ItemLink><Description>Add
+        To Wedding Registry</Description><URL>http://www.amazon.com/gp/registry/wedding/add-item.html%3Fasin.0%3DB018FRYU5A%26SubscriptionId%3DAKIAJ3BXPLLMU6Z2S4QA%26tag%3Dcubbystuffers-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB018FRYU5A</URL></ItemLink><ItemLink><Description>Add
+        To Wishlist</Description><URL>http://www.amazon.com/gp/registry/wishlist/add-item.html%3Fasin.0%3DB018FRYU5A%26SubscriptionId%3DAKIAJ3BXPLLMU6Z2S4QA%26tag%3Dcubbystuffers-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB018FRYU5A</URL></ItemLink><ItemLink><Description>Tell
+        A Friend</Description><URL>http://www.amazon.com/gp/pdp/taf/B018FRYU5A%3FSubscriptionId%3DAKIAJ3BXPLLMU6Z2S4QA%26tag%3Dcubbystuffers-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB018FRYU5A</URL></ItemLink><ItemLink><Description>All
+        Customer Reviews</Description><URL>http://www.amazon.com/review/product/B018FRYU5A%3FSubscriptionId%3DAKIAJ3BXPLLMU6Z2S4QA%26tag%3Dcubbystuffers-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB018FRYU5A</URL></ItemLink><ItemLink><Description>All
+        Offers</Description><URL>http://www.amazon.com/gp/offer-listing/B018FRYU5A%3FSubscriptionId%3DAKIAJ3BXPLLMU6Z2S4QA%26tag%3Dcubbystuffers-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB018FRYU5A</URL></ItemLink></ItemLinks><SalesRank>2921</SalesRank><SmallImage><URL>http://ecx.images-amazon.com/images/I/61XZw1COsOL._SL75_.jpg</URL><Height
+        Units="pixels">61</Height><Width Units="pixels">75</Width></SmallImage><MediumImage><URL>http://ecx.images-amazon.com/images/I/61XZw1COsOL._SL160_.jpg</URL><Height
+        Units="pixels">129</Height><Width Units="pixels">160</Width></MediumImage><LargeImage><URL>http://ecx.images-amazon.com/images/I/61XZw1COsOL.jpg</URL><Height
+        Units="pixels">404</Height><Width Units="pixels">500</Width></LargeImage><ImageSets><ImageSet
+        Category="variant"><SwatchImage><URL>http://ecx.images-amazon.com/images/I/51nvNi44qQL._SL30_.jpg</URL><Height
+        Units="pixels">13</Height><Width Units="pixels">30</Width></SwatchImage><SmallImage><URL>http://ecx.images-amazon.com/images/I/51nvNi44qQL._SL75_.jpg</URL><Height
+        Units="pixels">31</Height><Width Units="pixels">75</Width></SmallImage><ThumbnailImage><URL>http://ecx.images-amazon.com/images/I/51nvNi44qQL._SL75_.jpg</URL><Height
+        Units="pixels">31</Height><Width Units="pixels">75</Width></ThumbnailImage><TinyImage><URL>http://ecx.images-amazon.com/images/I/51nvNi44qQL._SL110_.jpg</URL><Height
+        Units="pixels">46</Height><Width Units="pixels">110</Width></TinyImage><MediumImage><URL>http://ecx.images-amazon.com/images/I/51nvNi44qQL._SL160_.jpg</URL><Height
+        Units="pixels">67</Height><Width Units="pixels">160</Width></MediumImage><LargeImage><URL>http://ecx.images-amazon.com/images/I/51nvNi44qQL.jpg</URL><Height
+        Units="pixels">209</Height><Width Units="pixels">500</Width></LargeImage></ImageSet><ImageSet
+        Category="variant"><SwatchImage><URL>http://ecx.images-amazon.com/images/I/310mD3rs-cL._SL30_.jpg</URL><Height
+        Units="pixels">2</Height><Width Units="pixels">30</Width></SwatchImage><SmallImage><URL>http://ecx.images-amazon.com/images/I/310mD3rs-cL._SL75_.jpg</URL><Height
+        Units="pixels">6</Height><Width Units="pixels">75</Width></SmallImage><ThumbnailImage><URL>http://ecx.images-amazon.com/images/I/310mD3rs-cL._SL75_.jpg</URL><Height
+        Units="pixels">6</Height><Width Units="pixels">75</Width></ThumbnailImage><TinyImage><URL>http://ecx.images-amazon.com/images/I/310mD3rs-cL._SL110_.jpg</URL><Height
+        Units="pixels">9</Height><Width Units="pixels">110</Width></TinyImage><MediumImage><URL>http://ecx.images-amazon.com/images/I/310mD3rs-cL._SL160_.jpg</URL><Height
+        Units="pixels">13</Height><Width Units="pixels">160</Width></MediumImage><LargeImage><URL>http://ecx.images-amazon.com/images/I/310mD3rs-cL.jpg</URL><Height
+        Units="pixels">40</Height><Width Units="pixels">500</Width></LargeImage></ImageSet><ImageSet
+        Category="variant"><SwatchImage><URL>http://ecx.images-amazon.com/images/I/51a6l3rUSWL._SL30_.jpg</URL><Height
+        Units="pixels">24</Height><Width Units="pixels">30</Width></SwatchImage><SmallImage><URL>http://ecx.images-amazon.com/images/I/51a6l3rUSWL._SL75_.jpg</URL><Height
+        Units="pixels">61</Height><Width Units="pixels">75</Width></SmallImage><ThumbnailImage><URL>http://ecx.images-amazon.com/images/I/51a6l3rUSWL._SL75_.jpg</URL><Height
+        Units="pixels">61</Height><Width Units="pixels">75</Width></ThumbnailImage><TinyImage><URL>http://ecx.images-amazon.com/images/I/51a6l3rUSWL._SL110_.jpg</URL><Height
+        Units="pixels">89</Height><Width Units="pixels">110</Width></TinyImage><MediumImage><URL>http://ecx.images-amazon.com/images/I/51a6l3rUSWL._SL160_.jpg</URL><Height
+        Units="pixels">129</Height><Width Units="pixels">160</Width></MediumImage><LargeImage><URL>http://ecx.images-amazon.com/images/I/51a6l3rUSWL.jpg</URL><Height
+        Units="pixels">404</Height><Width Units="pixels">500</Width></LargeImage></ImageSet><ImageSet
+        Category="variant"><SwatchImage><URL>http://ecx.images-amazon.com/images/I/31y6Rtr%2ByPL._SL30_.jpg</URL><Height
+        Units="pixels">30</Height><Width Units="pixels">22</Width></SwatchImage><SmallImage><URL>http://ecx.images-amazon.com/images/I/31y6Rtr%2ByPL._SL75_.jpg</URL><Height
+        Units="pixels">75</Height><Width Units="pixels">56</Width></SmallImage><ThumbnailImage><URL>http://ecx.images-amazon.com/images/I/31y6Rtr%2ByPL._SL75_.jpg</URL><Height
+        Units="pixels">75</Height><Width Units="pixels">56</Width></ThumbnailImage><TinyImage><URL>http://ecx.images-amazon.com/images/I/31y6Rtr%2ByPL._SL110_.jpg</URL><Height
+        Units="pixels">110</Height><Width Units="pixels">82</Width></TinyImage><MediumImage><URL>http://ecx.images-amazon.com/images/I/31y6Rtr%2ByPL._SL160_.jpg</URL><Height
+        Units="pixels">160</Height><Width Units="pixels">120</Width></MediumImage><LargeImage><URL>http://ecx.images-amazon.com/images/I/31y6Rtr%2ByPL.jpg</URL><Height
+        Units="pixels">500</Height><Width Units="pixels">375</Width></LargeImage></ImageSet><ImageSet
+        Category="primary"><SwatchImage><URL>http://ecx.images-amazon.com/images/I/61XZw1COsOL._SL30_.jpg</URL><Height
+        Units="pixels">24</Height><Width Units="pixels">30</Width></SwatchImage><SmallImage><URL>http://ecx.images-amazon.com/images/I/61XZw1COsOL._SL75_.jpg</URL><Height
+        Units="pixels">61</Height><Width Units="pixels">75</Width></SmallImage><ThumbnailImage><URL>http://ecx.images-amazon.com/images/I/61XZw1COsOL._SL75_.jpg</URL><Height
+        Units="pixels">61</Height><Width Units="pixels">75</Width></ThumbnailImage><TinyImage><URL>http://ecx.images-amazon.com/images/I/61XZw1COsOL._SL110_.jpg</URL><Height
+        Units="pixels">89</Height><Width Units="pixels">110</Width></TinyImage><MediumImage><URL>http://ecx.images-amazon.com/images/I/61XZw1COsOL._SL160_.jpg</URL><Height
+        Units="pixels">129</Height><Width Units="pixels">160</Width></MediumImage><LargeImage><URL>http://ecx.images-amazon.com/images/I/61XZw1COsOL.jpg</URL><Height
+        Units="pixels">404</Height><Width Units="pixels">500</Width></LargeImage></ImageSet></ImageSets><ItemAttributes><Binding>Grocery</Binding><Brand>Blue
+        Diamond Almonds</Brand><EAN>0041570109489</EAN><EANList><EANListElement>0041570109489</EANListElement></EANList><Feature>Oven
+        roasted almonds paired with the buttery sweetness of caramel</Feature><Feature>Irresistible
+        snacking</Feature><Feature>Tasty snack, great for sharing and dipping</Feature><Feature>4g
+        net carbs per serving</Feature><Feature>0 trans fat</Feature><Label>Blue Diamond
+        Growers</Label><Manufacturer>Blue Diamond Growers</Manufacturer><PackageDimensions><Height
+        Units="hundredths-inches">260</Height><Length Units="hundredths-inches">340</Length><Weight
+        Units="hundredths-pounds">50</Weight><Width Units="hundredths-inches">340</Width></PackageDimensions><PackageQuantity>1</PackageQuantity><ProductGroup>Pantry</ProductGroup><ProductTypeName>GROCERY</ProductTypeName><Publisher>Blue
+        Diamond Growers</Publisher><Studio>Blue Diamond Growers</Studio><Title>Blue
+        Diamond Almonds, Salted Caramel, 6 oz</Title><UPC>041570109489</UPC><UPCList><UPCListElement>041570109489</UPCListElement></UPCList></ItemAttributes><OfferSummary><LowestNewPrice><Amount>345</Amount><CurrencyCode>USD</CurrencyCode><FormattedPrice>$3.45</FormattedPrice></LowestNewPrice><TotalNew>1</TotalNew><TotalUsed>0</TotalUsed><TotalCollectible>0</TotalCollectible><TotalRefurbished>0</TotalRefurbished></OfferSummary><Offers><TotalOffers>1</TotalOffers><TotalOfferPages>1</TotalOfferPages><MoreOffersUrl>http://www.amazon.com/gp/offer-listing/B018FRYU5A%3FSubscriptionId%3DAKIAJ3BXPLLMU6Z2S4QA%26tag%3Dcubbystuffers-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB018FRYU5A</MoreOffersUrl><Offer><OfferAttributes><Condition>New</Condition></OfferAttributes><OfferListing><OfferListingId>BZ2Ja%2FsZN0ULx%2BR0v14Qb7XfLDsuIi4U6faGN58%2Bhw4Z6tF5ZgEcGFtRjZjPu23Qeq7ds7077gznke17XWkqagHPM5ZGOJQoW6P5uT3f4gr73QLehxznCA%3D%3D</OfferListingId><Price><Amount>345</Amount><CurrencyCode>USD</CurrencyCode><FormattedPrice>$3.45</FormattedPrice></Price><Availability>Usually
+        ships in 24 hours</Availability><AvailabilityAttributes><AvailabilityType>now</AvailabilityType><MinimumHours>0</MinimumHours><MaximumHours>0</MaximumHours></AvailabilityAttributes><IsEligibleForSuperSaverShipping>0</IsEligibleForSuperSaverShipping><IsEligibleForPrime>1</IsEligibleForPrime></OfferListing></Offer></Offers><CustomerReviews><IFrameURL>http://www.amazon.com/reviews/iframe?akid=AKIAJ3BXPLLMU6Z2S4QA&amp;alinkCode=xm2&amp;asin=B018FRYU5A&amp;atag=cubbystuffers-20&amp;exp=2016-08-01T22%3A12%3A57Z&amp;v=2&amp;sig=rTi7OoEpjYCqD%2Bm9yH1bkRKKCg%2BXW1wSY%2BEVdSfmRpA%3D</IFrameURL><HasReviews>true</HasReviews></CustomerReviews><EditorialReviews><EditorialReview><Source>Product
+        Description</Source><Content>This is one of those snacks we predict will disappear
+        quickly.  So good ahead and enjoy the crunch of these oven-roasted almonds.  The
+        flavor-packed combination is also a good source of protein to help you get
+        up and go</Content><IsLinkSuppressed>0</IsLinkSuppressed></EditorialReview></EditorialReviews><SimilarProducts><SimilarProduct><ASIN>B018FRZ4T6</ASIN><Title>Blue
+        Diamond Almonds, Honey Roasted Vanilla, 6 oz</Title></SimilarProduct><SimilarProduct><ASIN>B018FRYR2G</ASIN><Title>Blue
+        Diamond Almonds, Toasted Coconut, 6 oz</Title></SimilarProduct><SimilarProduct><ASIN>B018FRZ7LG</ASIN><Title>Blue
+        Diamond Almonds, Honey Roasted Cinnamon, 6 oz</Title></SimilarProduct><SimilarProduct><ASIN>B018FRXXOO</ASIN><Title>Blue
+        Diamond Almonds, Honey Dijon, 6 oz</Title></SimilarProduct><SimilarProduct><ASIN>B018FS0N32</ASIN><Title>Blue
+        Diamond Almonds, Honey Roasted, 6 oz</Title></SimilarProduct></SimilarProducts><BrowseNodes><BrowseNode><BrowseNodeId>11437481011</BrowseNodeId><Name>Nuts
+        &amp; Seeds</Name><Children><BrowseNode><BrowseNodeId>16322891</BrowseNodeId><Name>Almonds</Name></BrowseNode><BrowseNode><BrowseNodeId>8975266011</BrowseNodeId><Name>Brazil</Name></BrowseNode><BrowseNode><BrowseNodeId>16322901</BrowseNodeId><Name>Cashews</Name></BrowseNode><BrowseNode><BrowseNodeId>6492300011</BrowseNodeId><Name>Hazelnuts</Name></BrowseNode><BrowseNode><BrowseNodeId>16322921</BrowseNodeId><Name>Macadamia
+        Nuts</Name></BrowseNode><BrowseNode><BrowseNodeId>16322931</BrowseNodeId><Name>Mixed
+        Nuts</Name></BrowseNode><BrowseNode><BrowseNodeId>16322941</BrowseNodeId><Name>Peanuts</Name></BrowseNode><BrowseNode><BrowseNodeId>370408011</BrowseNodeId><Name>Pecans</Name></BrowseNode><BrowseNode><BrowseNodeId>16322951</BrowseNodeId><Name>Pistachio
+        Nuts</Name></BrowseNode><BrowseNode><BrowseNodeId>16322961</BrowseNodeId><Name>Pumpkin
+        Seeds</Name></BrowseNode><BrowseNode><BrowseNodeId>8980430011</BrowseNodeId><Name>Soy
+        Nuts</Name></BrowseNode><BrowseNode><BrowseNodeId>16322971</BrowseNodeId><Name>Sunflower
+        Seeds</Name></BrowseNode><BrowseNode><BrowseNodeId>16322981</BrowseNodeId><Name>Walnuts</Name></BrowseNode></Children><Ancestors><BrowseNode><BrowseNodeId>16322721</BrowseNodeId><Name>Snack
+        Foods</Name><Ancestors><BrowseNode><BrowseNodeId>16310211</BrowseNodeId><Name>Categories</Name><IsCategoryRoot>1</IsCategoryRoot><Ancestors><BrowseNode><BrowseNodeId>16310101</BrowseNodeId><Name>Grocery
+        &amp; Gourmet Food</Name></BrowseNode></Ancestors></BrowseNode></Ancestors></BrowseNode></Ancestors></BrowseNode><BrowseNode><BrowseNodeId>9865381011</BrowseNodeId><Name>Almonds</Name><Ancestors><BrowseNode><BrowseNodeId>9865380011</BrowseNodeId><Name>Nuts</Name><Ancestors><BrowseNode><BrowseNodeId>9865378011</BrowseNodeId><Name>Nuts,
+        Seeds &amp; Snack Mix</Name><Ancestors><BrowseNode><BrowseNodeId>6506977011</BrowseNodeId><Name>Produce</Name><Ancestors><BrowseNode><BrowseNodeId>16310211</BrowseNodeId><Name>Categories</Name><IsCategoryRoot>1</IsCategoryRoot><Ancestors><BrowseNode><BrowseNodeId>16310101</BrowseNodeId><Name>Grocery
+        &amp; Gourmet Food</Name></BrowseNode></Ancestors></BrowseNode></Ancestors></BrowseNode></Ancestors></BrowseNode></Ancestors></BrowseNode></Ancestors></BrowseNode></BrowseNodes></Item><Item><ASIN>B0166C22JM</ASIN><DetailPageURL>http://www.amazon.com/Blue-Diamond-Almonds-Salted-Caramel/dp/B0166C22JM%3FSubscriptionId%3DAKIAJ3BXPLLMU6Z2S4QA%26tag%3Dcubbystuffers-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB0166C22JM</DetailPageURL><ItemLinks><ItemLink><Description>Technical
+        Details</Description><URL>http://www.amazon.com/Blue-Diamond-Almonds-Salted-Caramel/dp/tech-data/B0166C22JM%3FSubscriptionId%3DAKIAJ3BXPLLMU6Z2S4QA%26tag%3Dcubbystuffers-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB0166C22JM</URL></ItemLink><ItemLink><Description>Add
+        To Baby Registry</Description><URL>http://www.amazon.com/gp/registry/baby/add-item.html%3Fasin.0%3DB0166C22JM%26SubscriptionId%3DAKIAJ3BXPLLMU6Z2S4QA%26tag%3Dcubbystuffers-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB0166C22JM</URL></ItemLink><ItemLink><Description>Add
+        To Wedding Registry</Description><URL>http://www.amazon.com/gp/registry/wedding/add-item.html%3Fasin.0%3DB0166C22JM%26SubscriptionId%3DAKIAJ3BXPLLMU6Z2S4QA%26tag%3Dcubbystuffers-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB0166C22JM</URL></ItemLink><ItemLink><Description>Add
+        To Wishlist</Description><URL>http://www.amazon.com/gp/registry/wishlist/add-item.html%3Fasin.0%3DB0166C22JM%26SubscriptionId%3DAKIAJ3BXPLLMU6Z2S4QA%26tag%3Dcubbystuffers-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB0166C22JM</URL></ItemLink><ItemLink><Description>Tell
+        A Friend</Description><URL>http://www.amazon.com/gp/pdp/taf/B0166C22JM%3FSubscriptionId%3DAKIAJ3BXPLLMU6Z2S4QA%26tag%3Dcubbystuffers-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB0166C22JM</URL></ItemLink><ItemLink><Description>All
+        Customer Reviews</Description><URL>http://www.amazon.com/review/product/B0166C22JM%3FSubscriptionId%3DAKIAJ3BXPLLMU6Z2S4QA%26tag%3Dcubbystuffers-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB0166C22JM</URL></ItemLink><ItemLink><Description>All
+        Offers</Description><URL>http://www.amazon.com/gp/offer-listing/B0166C22JM%3FSubscriptionId%3DAKIAJ3BXPLLMU6Z2S4QA%26tag%3Dcubbystuffers-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB0166C22JM</URL></ItemLink></ItemLinks><SalesRank>624379</SalesRank><SmallImage><URL>http://ecx.images-amazon.com/images/I/51dQdrlLztL._SL75_.jpg</URL><Height
+        Units="pixels">75</Height><Width Units="pixels">75</Width></SmallImage><MediumImage><URL>http://ecx.images-amazon.com/images/I/51dQdrlLztL._SL160_.jpg</URL><Height
+        Units="pixels">160</Height><Width Units="pixels">160</Width></MediumImage><LargeImage><URL>http://ecx.images-amazon.com/images/I/51dQdrlLztL.jpg</URL><Height
+        Units="pixels">500</Height><Width Units="pixels">500</Width></LargeImage><ImageSets><ImageSet
+        Category="variant"><SwatchImage><URL>http://ecx.images-amazon.com/images/I/51nhyHfwlAL._SL30_.jpg</URL><Height
+        Units="pixels">25</Height><Width Units="pixels">30</Width></SwatchImage><SmallImage><URL>http://ecx.images-amazon.com/images/I/51nhyHfwlAL._SL75_.jpg</URL><Height
+        Units="pixels">63</Height><Width Units="pixels">75</Width></SmallImage><ThumbnailImage><URL>http://ecx.images-amazon.com/images/I/51nhyHfwlAL._SL75_.jpg</URL><Height
+        Units="pixels">63</Height><Width Units="pixels">75</Width></ThumbnailImage><TinyImage><URL>http://ecx.images-amazon.com/images/I/51nhyHfwlAL._SL110_.jpg</URL><Height
+        Units="pixels">92</Height><Width Units="pixels">110</Width></TinyImage><MediumImage><URL>http://ecx.images-amazon.com/images/I/51nhyHfwlAL._SL160_.jpg</URL><Height
+        Units="pixels">134</Height><Width Units="pixels">160</Width></MediumImage><LargeImage><URL>http://ecx.images-amazon.com/images/I/51nhyHfwlAL.jpg</URL><Height
+        Units="pixels">419</Height><Width Units="pixels">500</Width></LargeImage></ImageSet><ImageSet
+        Category="primary"><SwatchImage><URL>http://ecx.images-amazon.com/images/I/51dQdrlLztL._SL30_.jpg</URL><Height
+        Units="pixels">30</Height><Width Units="pixels">30</Width></SwatchImage><SmallImage><URL>http://ecx.images-amazon.com/images/I/51dQdrlLztL._SL75_.jpg</URL><Height
+        Units="pixels">75</Height><Width Units="pixels">75</Width></SmallImage><ThumbnailImage><URL>http://ecx.images-amazon.com/images/I/51dQdrlLztL._SL75_.jpg</URL><Height
+        Units="pixels">75</Height><Width Units="pixels">75</Width></ThumbnailImage><TinyImage><URL>http://ecx.images-amazon.com/images/I/51dQdrlLztL._SL110_.jpg</URL><Height
+        Units="pixels">110</Height><Width Units="pixels">110</Width></TinyImage><MediumImage><URL>http://ecx.images-amazon.com/images/I/51dQdrlLztL._SL160_.jpg</URL><Height
+        Units="pixels">160</Height><Width Units="pixels">160</Width></MediumImage><LargeImage><URL>http://ecx.images-amazon.com/images/I/51dQdrlLztL.jpg</URL><Height
+        Units="pixels">500</Height><Width Units="pixels">500</Width></LargeImage></ImageSet></ImageSets><ItemAttributes><Binding>Misc.</Binding><Brand>Blue
+        Diamond Almonds</Brand><EAN>0041570109489</EAN><EANList><EANListElement>0041570109489</EANListElement></EANList><Feature>Blue
+        Diamond Almonds</Feature><Feature>Salted Caramel</Feature><Feature>Net Wt.
+        6 OZ (170 g) Each</Feature><Feature>Pack of 6 Containers Per Quantity Ordered</Feature><ItemDimensions><Weight
+        Units="hundredths-pounds">38</Weight></ItemDimensions><Label>Blue Diamond
+        Growers USA</Label><Manufacturer>Blue Diamond Growers USA</Manufacturer><PackageQuantity>6</PackageQuantity><ProductGroup>Grocery</ProductGroup><ProductTypeName>GROCERY</ProductTypeName><Publisher>Blue
+        Diamond Growers USA</Publisher><Studio>Blue Diamond Growers USA</Studio><Title>Blue
+        Diamond Almonds - Salted Caramel - Net Wt. 6 OZ (170 g) Each - Pack of 6</Title><UPC>041570109489</UPC><UPCList><UPCListElement>041570109489</UPCListElement></UPCList></ItemAttributes><OfferSummary><LowestNewPrice><Amount>5499</Amount><CurrencyCode>USD</CurrencyCode><FormattedPrice>$54.99</FormattedPrice></LowestNewPrice><TotalNew>1</TotalNew><TotalUsed>0</TotalUsed><TotalCollectible>0</TotalCollectible><TotalRefurbished>0</TotalRefurbished></OfferSummary><Offers><TotalOffers>1</TotalOffers><TotalOfferPages>1</TotalOfferPages><MoreOffersUrl>http://www.amazon.com/gp/offer-listing/B0166C22JM%3FSubscriptionId%3DAKIAJ3BXPLLMU6Z2S4QA%26tag%3Dcubbystuffers-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB0166C22JM</MoreOffersUrl><Offer><OfferAttributes><Condition>New</Condition></OfferAttributes><OfferListing><OfferListingId>BZ2Ja%2FsZN0ULx%2BR0v14Qb7OAJckU74KvqjwkayEq2sOMjRSQWTiXepw%2FNjwPDs9HA%2FYCOzSkvZ3X14fdzv%2F5rFGEvt82IeRVh7EzTZUmlBPHsryU0JSl51VZpFLstX%2BTLzJNka4soNxElyQcHK4okg%3D%3D</OfferListingId><Price><Amount>5499</Amount><CurrencyCode>USD</CurrencyCode><FormattedPrice>$54.99</FormattedPrice></Price><Availability>Usually
+        ships in 1-2 business days</Availability><AvailabilityAttributes><AvailabilityType>now</AvailabilityType><MinimumHours>24</MinimumHours><MaximumHours>48</MaximumHours></AvailabilityAttributes><IsEligibleForSuperSaverShipping>0</IsEligibleForSuperSaverShipping><IsEligibleForPrime>0</IsEligibleForPrime></OfferListing></Offer></Offers><CustomerReviews><IFrameURL>http://www.amazon.com/reviews/iframe?akid=AKIAJ3BXPLLMU6Z2S4QA&amp;alinkCode=xm2&amp;asin=B0166C22JM&amp;atag=cubbystuffers-20&amp;exp=2016-08-01T22%3A12%3A57Z&amp;v=2&amp;sig=2TvLLEikFrzYnP63xoGlwpKOlRCEmEZ3cOi1HO1F7pQ%3D</IFrameURL><HasReviews>false</HasReviews></CustomerReviews><EditorialReviews><EditorialReview><Source>Product
+        Description</Source><Content>Blue Diamond Almonds in Salted Caramel Flavor
+        (Net Wt. 6 OZ Each). Pack of 6 containers per quantity ordered.</Content><IsLinkSuppressed>0</IsLinkSuppressed></EditorialReview></EditorialReviews><BrowseNodes><BrowseNode><BrowseNodeId>11437481011</BrowseNodeId><Name>Nuts
+        &amp; Seeds</Name><Children><BrowseNode><BrowseNodeId>16322891</BrowseNodeId><Name>Almonds</Name></BrowseNode><BrowseNode><BrowseNodeId>8975266011</BrowseNodeId><Name>Brazil</Name></BrowseNode><BrowseNode><BrowseNodeId>16322901</BrowseNodeId><Name>Cashews</Name></BrowseNode><BrowseNode><BrowseNodeId>6492300011</BrowseNodeId><Name>Hazelnuts</Name></BrowseNode><BrowseNode><BrowseNodeId>16322921</BrowseNodeId><Name>Macadamia
+        Nuts</Name></BrowseNode><BrowseNode><BrowseNodeId>16322931</BrowseNodeId><Name>Mixed
+        Nuts</Name></BrowseNode><BrowseNode><BrowseNodeId>16322941</BrowseNodeId><Name>Peanuts</Name></BrowseNode><BrowseNode><BrowseNodeId>370408011</BrowseNodeId><Name>Pecans</Name></BrowseNode><BrowseNode><BrowseNodeId>16322951</BrowseNodeId><Name>Pistachio
+        Nuts</Name></BrowseNode><BrowseNode><BrowseNodeId>16322961</BrowseNodeId><Name>Pumpkin
+        Seeds</Name></BrowseNode><BrowseNode><BrowseNodeId>8980430011</BrowseNodeId><Name>Soy
+        Nuts</Name></BrowseNode><BrowseNode><BrowseNodeId>16322971</BrowseNodeId><Name>Sunflower
+        Seeds</Name></BrowseNode><BrowseNode><BrowseNodeId>16322981</BrowseNodeId><Name>Walnuts</Name></BrowseNode></Children><Ancestors><BrowseNode><BrowseNodeId>16322721</BrowseNodeId><Name>Snack
+        Foods</Name><Ancestors><BrowseNode><BrowseNodeId>16310211</BrowseNodeId><Name>Categories</Name><IsCategoryRoot>1</IsCategoryRoot><Ancestors><BrowseNode><BrowseNodeId>16310101</BrowseNodeId><Name>Grocery
+        &amp; Gourmet Food</Name></BrowseNode></Ancestors></BrowseNode></Ancestors></BrowseNode></Ancestors></BrowseNode><BrowseNode><BrowseNodeId>9865381011</BrowseNodeId><Name>Almonds</Name><Ancestors><BrowseNode><BrowseNodeId>9865380011</BrowseNodeId><Name>Nuts</Name><Ancestors><BrowseNode><BrowseNodeId>9865378011</BrowseNodeId><Name>Nuts,
+        Seeds &amp; Snack Mix</Name><Ancestors><BrowseNode><BrowseNodeId>6506977011</BrowseNodeId><Name>Produce</Name><Ancestors><BrowseNode><BrowseNodeId>16310211</BrowseNodeId><Name>Categories</Name><IsCategoryRoot>1</IsCategoryRoot><Ancestors><BrowseNode><BrowseNodeId>16310101</BrowseNodeId><Name>Grocery
+        &amp; Gourmet Food</Name></BrowseNode></Ancestors></BrowseNode></Ancestors></BrowseNode></Ancestors></BrowseNode></Ancestors></BrowseNode></Ancestors></BrowseNode></BrowseNodes></Item></Items></ItemLookupResponse>
+    http_version: 
+  recorded_at: Sun, 31 Jul 2016 22:12:57 GMT
+recorded_with: VCR 3.0.3

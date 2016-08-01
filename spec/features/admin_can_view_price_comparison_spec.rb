@@ -12,8 +12,12 @@ RSpec.feature "admin can see price comparison" do
 
     expect(current_path).to eq admin_price_comparison_path
 
-    within ".price_comparison_table" do
-      expect(page).to have_content("45595112")
+    within ".walmart_price_comparison_table tr:nth-child(2)" do
+      expect(page).to have_content("041570109489")
     end    
+
+    within ".amazon_price_comparison_table tr:nth-child(2)" do
+      expect(page).to have_content("041570109489")
+    end
   end
 end
