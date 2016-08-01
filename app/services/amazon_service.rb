@@ -4,11 +4,11 @@ class AmazonService
     @_conn = Faraday.new
   end
 
-  def get_info(upc)
+  def get_info(upcs)
 
     begin
       app_name = "cubbystuffers-20"
-      url = "http://webservices.amazon.com/onca/xml?AWSAccessKeyId=#{ENV['AMAZON_API_KEY']}&AssociateTag=#{app_name}&ItemId=#{upc}&IdType=UPC&SearchIndex=All&Operation=ItemLookup&ResponseGroup=Large&Service=AWSECommerceService&Timestamp="
+      url = "http://webservices.amazon.com/onca/xml?AWSAccessKeyId=#{ENV['AMAZON_API_KEY']}&AssociateTag=#{app_name}&ItemId=#{upcs}&IdType=UPC&SearchIndex=All&Operation=ItemLookup&ResponseGroup=Large&Service=AWSECommerceService&Timestamp="
       url << Time.now.utc.strftime("%Y-%m-%dT%H:%M:%SZ")
 
       signed_url = create_signature(url)
@@ -16,7 +16,7 @@ class AmazonService
         req.url signed_url
       end
 
-      parse(response)
+      result = parse(response)
       
     rescue StandardError
       puts "sleepytime"
