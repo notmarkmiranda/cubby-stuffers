@@ -3,7 +3,6 @@ require 'rails_helper'
 RSpec.feature "visitor can create an internal account" do
   context "valid credentials" do
     scenario "they are redirected to the user dashboard" do
-      #cubby = create(:cubby)
 
       visit root_path
 
