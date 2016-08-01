@@ -3,7 +3,6 @@ require 'rails_helper'
 RSpec.feature "visitor can create an internal account" do
   context "valid credentials" do
     scenario "they are redirected to the user dashboard" do
-      #cubby = create(:cubby)
 
       visit root_path
 
@@ -39,7 +38,7 @@ RSpec.feature "visitor can create an internal account" do
       select(location, from: "cubby_location")
       select(column, from: "cubby_column")
       select(row, from: "cubby_row")
-      
+
       click_button "Register Cubby"
 
       expect(current_path).to eq (dashboard_path)
@@ -49,7 +48,7 @@ RSpec.feature "visitor can create an internal account" do
       end
 
       within("nav") do
-        expect(page).to have_content("Get Stuffed, Neight")
+        expect(page).to have_content("Welcome, Neight")
         expect(page).to_not have_content("Login")
         expect(page).to have_content("Logout")
       end

@@ -1,2 +1,10 @@
 <h1>Admin Dashboard</h1>
 <%= link_to "Pending Fulfillments", admin_fulfillments_path %>
+
+<p>Price Comparison Tool</p>
+
+<%= form_tag "/admin/price_comparison", method: "get" do %>
+  <%= label_tag :query, "Enter Item Name:", class: :form_control %>
+  <%= text_field_tag :query %>
+  <%= submit_tag("Search") %>
+<% end %>

@@ -16,6 +16,13 @@ def login_user(user)
   click_button "Sign in"
 end
 
+VCR.configure do |c|
+  c.cassette_library_dir = 'spec/cassettes'
+  c.hook_into :webmock
+  c.configure_rspec_metadata!
+  c.allow_http_connections_when_no_cassette = true
+end
+
 module OmniauthMacros
   def mock_auth_hash
     OmniAuth.config.test_mode = true
@@ -84,7 +91,8 @@ RSpec.configure do |config|
   #
   # The different available types are documented in the features, such as in
   # https://relishapp.com/rspec/rspec-rails/docs
-  config.infer_spec_type_from_file_location!
+
+  config.infer_spec_type_from_file_location! # For RSpec 3 and up, 2 and below infer by file location
 
   # Filter lines from Rails gems in backtraces.
   config.filter_rails_from_backtrace!

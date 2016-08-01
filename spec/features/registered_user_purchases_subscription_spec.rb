@@ -15,6 +15,7 @@ RSpec.feature "Registered User Makes a Purchase", js: true do
 
       sleep(2)
       stripe_iframe = all('iframe[name=stripe_checkout_app]').last
+
       Capybara.within_frame stripe_iframe do
         page.execute_script(%Q{ $('input#email').val('coolguy@yahoo.com'); })
         page.execute_script(%Q{ $('input#card_number').val('4242424242424242'); })

@@ -1,3 +1,4 @@
+
 Rails.application.routes.draw do
   root to: "static_pages#splash"
 
@@ -9,8 +10,10 @@ Rails.application.routes.draw do
 
   resources :charges, only: [:new, :create]
 
+
   namespace :admin do
     get "/dashboard", to: "users#show"
+    get "/price_comparison", to: "price_comparison#index"
     resources :fulfillments, only: [:index, :show, :update]
   end
 
