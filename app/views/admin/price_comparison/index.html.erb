@@ -1,40 +1,24 @@
-<h1>Price Comparison</h1>
+<div class="container">
+  <h1>Price Comparison for "<%= @query %>"</h1>
+  <table class="price_comparison_table table table-striped">
+     <thead>
+      <tr>
+        <th>Image</th>
+        <th>UPC</th>
+        <th>Name</th>
+        <th>Walmart Price</th>
+        <th>Amazon Price</th>
+      </tr>
+    </thead>
 
-<table class="walmart_price_comparison_table">
-   <thead>
-    <tr>
-      <th>Image</th>
-      <th>Name</th>
-      <th>UPC</th>
-      <th>Price</th>
-    </tr>
-  </thead>
-
-  <% @walmart_products.each do |walmart_product| %>
-    <tr>
-      <td><%= image_tag walmart_product.image_path %></td>
-      <td><%= walmart_product.upc %></td>
-      <td><%= walmart_product.name %></td>
-      <td>$<%= walmart_product.price %></td>
-    </tr>
-  <% end %>
-
-</table>
-
-<table class="amazon_price_comparison_table">
-   <thead>
-    <tr>
-      <th>Name</th>
-      <th>UPC</th>
-      <th>Prime</th>
-      <th>Price</th>
-    </tr>
-  </thead>
-  <% @amazon_products.each do |amazon_product| %>
-    <tr>
-      <td><%= link_to amazon_product.name, amazon_product.url %></td>
-      <td><%= amazon_product.upc %></td>
-      <td><%= amazon_product.is_prime? %></td>
-      <td><%= amazon_product.price %></td>
-    </tr>
-  <% end %>
+    <% @walmart_products.each do |walmart_product| %>
+      <tr>
+        <td><%= image_tag walmart_product.image_path %></td>
+        <td><%= walmart_product.upc %></td>
+        <td><%= walmart_product.name %></td>
+        <td><%= link_to "$#{walmart_product.price}", walmart_product.url %></td>
+        <td><%= ProductPresenter.new(walmart_product, @amazon_products, self).matching_amazon_price %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
