@@ -11,6 +11,7 @@ describe AmazonService do
       item = all_data.first
       url = "http://www.amazon.com/Blue-Diamond-Almonds-Salted-Caramel/dp/B00DY8DBX8%3FSubscriptionId%3DAKIAJ3BXPLLMU6Z2S4QA%26tag%3Dcubbystuffers-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB00DY8DBX8"
 
+      expect(item["DetailPageURL"]).to eq(url)
       expect(item["ItemAttributes"]["UPC"]).to eq(upc)
       expect(item["ItemAttributes"]["Feature"][1]).to eq("Irresistible snacking")
       expect(item["OfferSummary"]["LowestNewPrice"]["FormattedPrice"]).to eq("$3.40")

@@ -1,12 +1,11 @@
 <h1>Price Comparison</h1>
 
-
-<table class="price_comparison_table">
+<table class="walmart_price_comparison_table">
    <thead>
     <tr>
       <th>Image</th>
-      <th>Id</th>
       <th>Name</th>
+      <th>UPC</th>
       <th>Price</th>
     </tr>
   </thead>
@@ -14,9 +13,28 @@
   <% @walmart_products.each do |walmart_product| %>
     <tr>
       <td><%= image_tag walmart_product.image_path %></td>
-      <td><%= walmart_product.walmart_id %></td>
+      <td><%= walmart_product.upc %></td>
       <td><%= walmart_product.name %></td>
       <td>$<%= walmart_product.price %></td>
     </tr>
   <% end %>
+
 </table>
+
+<table class="amazon_price_comparison_table">
+   <thead>
+    <tr>
+      <th>Name</th>
+      <th>UPC</th>
+      <th>Prime</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <% @amazon_products.each do |amazon_product| %>
+    <tr>
+      <td><%= link_to amazon_product.name, amazon_product.url %></td>
+      <td><%= amazon_product.upc %></td>
+      <td><%= amazon_product.is_prime? %></td>
+      <td><%= amazon_product.price %></td>
+    </tr>
+  <% end %>
