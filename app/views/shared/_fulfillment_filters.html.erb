@@ -1,0 +1,9 @@
+<div class="col-md-6">
+  <div class="text-center">
+  <span class="filter-padding"><strong>Filters:</strong></span>
+  Module <%= select("module", "filter_modules", @modules, selected: "All Modules") %>
+  Week <%= select("week", "filter_weeks", @weeks, selected: "All Weeks") %>
+  User <%= select("user", "filter_users", @users, selected: "All Users") %>
+  Status <%= select("status", "filter_status", @status, selected: "All") %>
+</div>
+</div>
