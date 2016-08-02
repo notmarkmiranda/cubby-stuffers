@@ -18,11 +18,11 @@ Rails.application.routes.draw do
   end
 
   get "/login", to: "sessions#new"
-  post "/login", to: "sessions#create"
+  post "/login", to: "internal_sessions#create"
   delete "/logout", to: "sessions#destroy"
 
   get "/dashboard", to: "users#show"
 
   get "/auth/github", as: :github_login
-  get "/auth/github/callback", to: "sessions#create"
+  get "/auth/github/callback", to: "external_sessions#create"
 end
