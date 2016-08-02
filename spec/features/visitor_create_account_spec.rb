@@ -48,7 +48,7 @@ RSpec.feature "visitor can create an internal account" do
       end
 
       within("nav") do
-        expect(page).to have_content("Welcome, Neight")
+        expect(page).to have_content("Neight")
         expect(page).to_not have_content("Login")
         expect(page).to have_content("Logout")
       end

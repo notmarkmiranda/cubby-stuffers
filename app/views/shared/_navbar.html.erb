@@ -11,9 +11,8 @@
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right" id="navbar-links">
-        <li><a><%= "Welcome, "+ current_user.first_name if current_user %></a></li>
-        <li><%= link_to "Logout", logout_path, method: :delete if current_user %></li>
         <li><%= link_to "Login", login_path unless current_user %></li>
+        <%= render "shared/user_dropdown" %>
       </ul>
     </div>
   </div>
