@@ -7,6 +7,7 @@
     <tr>
       <th>First Name</th>
       <th>Last Name</th>
+      <th>email</th>
       <th>Cubby</th>
       <th>Module</th>
       <th>Week</th>
@@ -17,13 +18,14 @@
 
   <tbody>
     <% @fulfillments.each do |fulfillment| %>
-      <tr id="sub-id-<%= fulfillment.subscription.id %>-week-<%= fulfillment.week %>">
-      <td><%= fulfillment.user.first_name %></td>
-      <td><%= fulfillment.user.last_name %></td>
-      <td>Cubby Location</td>
-      <td><%= fulfillment.subscription.mod %></td>
-      <td><%= fulfillment.week %></td>
-      <td>
+      <tr class="fulfillment" id="sub-id-<%= fulfillment.subscription.id %>-week-<%= fulfillment.week %>">
+      <td class="first_name"><%= fulfillment.user.first_name %></td>
+      <td class="last_name"><%= fulfillment.user.last_name %></td>
+      <td class="email"><%= fulfillment.user.email %></td>
+      <td class="cubby_location">Cubby Location</td>
+      <td class="mod"><%= fulfillment.subscription.mod %></td>
+      <td class="week"><%= fulfillment.week %></td>
+      <td class="status">
       <% if fulfillment.fulfilled? %>
         Done
       <% else %>
