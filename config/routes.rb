@@ -28,6 +28,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       get "/price-comparison/:query", to: "price_comparison#index"
+      get "/redemptions", to: "redemptions#create"
     end
   end
 end

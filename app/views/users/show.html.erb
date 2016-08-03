@@ -1,3 +1,3 @@
 <h1>User Dashboard</h1>
 
-<p>Your Cubby: <%= @user.cubby.display_location %></p>
+<p>Your Cubby: <%= @user.cubby ? @user.cubby.display_location  : "Sign up now!" %></p>
