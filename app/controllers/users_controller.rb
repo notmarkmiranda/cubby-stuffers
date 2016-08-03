@@ -9,6 +9,7 @@ class UsersController < ApplicationController
     if @user.save
       session[:user_id] = @user.id
       flash[:success] = "Welcome To Cubby Stuffers!"
+      send_redemption_offer
       redirect_to new_user_cubby_path(@user)
     else
       flash.now[:danger] = @user.errors.full_messages.join(", ")
@@ -26,5 +27,10 @@ class UsersController < ApplicationController
                                    :email, :email_confirmation,
                                    :password, :password_confirmation,
                                    :phone_number)
+    end
+
+    def send_redemption_offer
+      RedemptionOfferMailer.offer(current_user).deliver_now
+      flash[:success] << " See your email for special offer!"
     end
 end
