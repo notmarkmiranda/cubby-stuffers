@@ -1,9 +1,9 @@
 <div class="col-md-6">
-  <div class="text-center">
-  <span class="filter-padding"><strong>Filters:</strong></span>
-  Module <%= select("fulfillment", "filter_modules", @modules, selected: "All Modules") %>
-  Week <%= select("fulfillment", "filter_weeks", @weeks, selected: "All Weeks") %>
-  User <%= select("fulfillment", "filter_users", @users, selected: "All Users") %>
-  Status <%= select("fulfillment", "filter_status", @status, selected: "All") %>
-</div>
+  <div class="text-center all_filters">
+    <span class="filter-padding"><strong>Filters:</strong></span>
+    Module <%= select("fulfillment", "filter_module", @modules, selected: "All Modules") %>
+    Week <%= select("fulfillment", "filter_week", @weeks, selected: "All Weeks") %>
+    User <%= select("fulfillment", "filter_user", @users, selected: "All Users") %>
+    Status <%= select("fulfillment", "filter_status", @status, selected: "All") %>
+  </div>
 </div>

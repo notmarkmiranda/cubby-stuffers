@@ -16,22 +16,22 @@
     </tr>
   </thead>
 
-  <tbody>
+  <tbody class="allFulfillments">
     <% @fulfillments.each do |fulfillment| %>
-      <tr class="fulfillment" id="sub-id-<%= fulfillment.subscription.id %>-week-<%= fulfillment.week %>">
-      <td class="first_name"><%= fulfillment.user.first_name %></td>
-      <td class="last_name"><%= fulfillment.user.last_name %></td>
-      <td class="email"><%= fulfillment.user.email %></td>
-      <td class="cubby_location">Cubby Location</td>
-      <td class="mod"><%= fulfillment.subscription.mod %></td>
-      <td class="week"><%= fulfillment.week %></td>
-      <td class="status">
-      <% if fulfillment.fulfilled? %>
-        Done
-      <% else %>
-        <%= link_to "Filled", admin_fulfillment_path(id: fulfillment, fulfill: "true"), method: :patch %>
-      <% end %>
-      </td>
+      <tr class="fulfillment" data-id=<%= fulfillment.subscription.mod %> id="sub-id-<%= fulfillment.subscription.id %>-week-<%= fulfillment.week %>">
+        <td class="first_name"><%= fulfillment.user.first_name %></td>
+        <td class="last_name"><%= fulfillment.user.last_name %></td>
+        <td class="email"><%= fulfillment.user.email %></td>
+        <td class="cubby_location">Cubby Location</td>
+        <td class="mod"><%= fulfillment.subscription.mod %></td>
+        <td class="week"><%= fulfillment.week %></td>
+        <td class="status">
+        <% if fulfillment.fulfilled? %>
+          Done
+        <% else %>
+          <%= link_to "Filled", admin_fulfillment_path(id: fulfillment, fulfill: "true"), method: :patch %>
+        <% end %>
+        </td>
       </tr>
     <% end %>
   </tbody>
