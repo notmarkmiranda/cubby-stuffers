@@ -1,4 +1,7 @@
-<h1>Admin Dashboard</h1>
-<%= link_to "Pending Fulfillments", admin_fulfillments_path %>
-
-<p><%= link_to "Price Comparison Tool", admin_price_comparison_path %></p>
+<div class="container text-center">
+  <h1>Admin Dashboard</h1><br>
+  <div class="btn-group" role="group">
+    <p><%= link_to "Pending Fulfillments", admin_fulfillments_path, class: "btn btn-primary" %></p>
+    <p><%= link_to "Price Comparison Tool", admin_price_comparison_path, class: "btn btn-primary" %></p>
+  </div>
+</div>
