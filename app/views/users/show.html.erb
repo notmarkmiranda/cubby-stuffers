@@ -6,7 +6,5 @@
     <% else %>
       You still need a cubby! <%= link_to "Sign up now!", new_user_cubby_path(current_user) %>
     <% end %>
-  <p>
-    <%= link_to "Your Subscriptions", subscriptions_path %>
-  </p>
+  <p><%= link_to "Your Subscriptions", subscriptions_path, class: "btn btn-primary" %></p>
 </div>
