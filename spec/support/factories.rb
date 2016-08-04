@@ -52,7 +52,7 @@ FactoryGirl.define do
         end
 
         after(:create) do |user, evaluator|
-          create_list(:subscription, evaluator.subscription_count, user: user)
+          create_list(:subscription_with_fulfillments, evaluator.subscription_count, user: user)
         end
       end
   end
@@ -89,5 +89,9 @@ FactoryGirl.define do
     location "Big Workspace"
     column "A"
     row "1"
+  end
+
+  factory :redemption do
+    association :user
   end
 end
