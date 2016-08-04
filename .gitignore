@@ -19,7 +19,8 @@
 # Ignore application configuration
 /config/application.yml
 
+# Ignore Test Coverage
+/coverage
 
 # Ignore assets
-
 /public/assets

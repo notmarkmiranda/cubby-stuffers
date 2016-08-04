@@ -11,7 +11,7 @@ RSpec.feature "admin views fulfillments spec" do
       visit admin_dashboard_path
 
       click_on "Pending Fulfillments"
-
+      
       expect(current_path).to eq admin_fulfillments_path
       expect(page).to have_content "Pending Fulfillments"
 
