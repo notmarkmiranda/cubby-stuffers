@@ -18,7 +18,7 @@
 
   <tbody class="allFulfillments">
     <% @fulfillments.each do |fulfillment| %>
-      <tr class="fulfillment" data-id=<%= fulfillment.subscription.mod %> id="sub-id-<%= fulfillment.subscription.id %>-week-<%= fulfillment.week %>">
+      <tr class="fulfillment" data-id=<%= fulfillment.id %> id="sub-id-<%= fulfillment.subscription.id %>-week-<%= fulfillment.week %>">
         <td class="first_name"><%= fulfillment.user.first_name %></td>
         <td class="last_name"><%= fulfillment.user.last_name %></td>
         <td class="email"><%= fulfillment.user.email %></td>
