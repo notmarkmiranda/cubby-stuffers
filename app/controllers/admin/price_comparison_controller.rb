@@ -1,4 +1,4 @@
-class PriceComparisonController < ApplicationController
+class Admin::PriceComparisonController < ApplicationController
   def index
   end
 end
