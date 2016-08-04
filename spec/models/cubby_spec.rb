@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Cubby, type: :model do
-  let(:cubby) { build(:cubby) }
+  let!(:cubby) { create(:cubby) }
 
   it "has a valid factory" do
     expect(cubby).to be_valid

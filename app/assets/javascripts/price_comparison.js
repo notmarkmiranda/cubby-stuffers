@@ -12,13 +12,17 @@ $(document).ready(function(){
       url: "/api/v1/price-comparison/" + query,
       method: "GET",
       dataType: "JSON",
-      success: function(products){
+      success: function(response){
         $("#query").html("for '" + query + "'");
         successEvents()
 
-        products.walmart_products.forEach(function(product) {
-          appendRow(products.amazon_products, product, matchAmazonProduct);
-        });
+        if (response.errors == "No Results") {
+          appendErrorRow(response)
+        } else {
+          response.walmart_products.forEach(function(product) {
+            appendRow(response.amazon_products, product, matchAmazonProduct);
+          });
+        }
       },
       error: function(errorResponse){
         console.log(errorResponse)
@@ -59,6 +63,10 @@ $(document).ready(function(){
 
   function convertCurrency(currency) {
     return Number(currency.replace(/[^0-9\.]+/g,""));
+  }
+
+  function appendErrorRow(response) {
+    $("#table-body").prepend("<tr>" + "<td colspan='5'>" + response.errors + "</td>" + "</tr>");
   }
 
   function appendRow(amazon_products, product) {

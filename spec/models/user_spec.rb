@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
 
   let(:user) { build(:user) }
-  let(:github_user) { build(:user, uid: "5", oauth_token: "asdlkfj") }
+  let(:github_user) { build(:user, uid: "xasdf5", oauth_token: "asdlkfj") }
   let(:internal_user) { build(:user, uid: nil, password: nil) }
 
   it "has a valid factory" do

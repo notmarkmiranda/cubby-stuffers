@@ -1,5 +1,7 @@
 class Redemption < ApplicationRecord
-  validates :user_id, presence: true
+  belongs_to :user
+
+  validates :user, presence: true
 
   def self.user_ids
     pluck(:user_id).uniq
