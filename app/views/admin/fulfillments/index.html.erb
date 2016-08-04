@@ -11,7 +11,7 @@
       <th>Cubby</th>
       <th>Module</th>
       <th>Week</th>
-      <th>Fulfilled?</th>
+      <th>Status</th>
       <th></th>
     </tr>
   </thead>
@@ -27,9 +27,9 @@
         <td class="week"><%= fulfillment.week %></td>
         <td class="status">
         <% if fulfillment.fulfilled? %>
-          Done
+          Complete
         <% else %>
-          <%= link_to "Filled", admin_fulfillment_path(id: fulfillment, fulfill: "true"), method: :patch %>
+          <%= link_to "Pending", admin_fulfillment_path(id: fulfillment, fulfill: "true"), method: :patch %>
         <% end %>
         </td>
       </tr>

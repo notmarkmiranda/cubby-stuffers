@@ -5,11 +5,13 @@ $(document).ready(function () {
     var currentMod = $('#fulfillment_filter_module').val();
     var currentWeek = $('#fulfillment_filter_week').val();
     var currentUser = $('#fulfillment_filter_user').val();
+    var currentStatus = $('#fulfillment_filter_status').val();
 
     var validMods = checkMod(currentMod);
     var validWeeks = checkWeek(currentWeek);
     var validUsers = checkUser(currentUser);
-    var validArrays = [validMods, validWeeks, validUsers];
+    var validStatuses = checkStatuses(currentStatus);
+    var validArrays = [validMods, validWeeks, validUsers, validStatuses];
 
     var showFulfillments = intersection(validArrays);
 
@@ -65,6 +67,19 @@ $(document).ready(function () {
         valid.push(fulfillment);
       }
 	});
+  return valid;
+  }
+
+  function checkStatuses(currentStatus) {
+    var valid = [];
+	  $fulfillments.each(function(index, fulfillment) {
+      if (fulfillment.querySelector(".status").innerText === currentStatus) {
+        valid.push(fulfillment);
+      } else if (currentStatus === "All") {
+        valid.push(fulfillment);
+      }
+	});
+    debugger
   return valid;
   }
 
