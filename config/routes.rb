@@ -1,4 +1,3 @@
-
 Rails.application.routes.draw do
   root to: "static_pages#splash"
 
@@ -25,4 +24,11 @@ Rails.application.routes.draw do
 
   get "/auth/github", as: :github_login
   get "/auth/github/callback", to: "external_sessions#create"
+
+  namespace :api do
+    namespace :v1 do
+      get "/price-comparison/:query", to: "price_comparison#index"
+      get "/redemptions", to: "redemptions#create"
+    end
+  end
 end
