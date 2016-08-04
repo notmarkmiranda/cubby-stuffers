@@ -1,10 +1,7 @@
-<h1>Admin Dashboard</h1>
-<%= link_to "Pending Fulfillments", admin_fulfillments_path %>
-
-<p>Price Comparison Tool</p>
-
-<%= form_tag "/admin/price_comparison", method: "get" do %>
-  <%= label_tag :query, "Enter Item Name:", class: :form_control %>
-  <%= text_field_tag :query %>
-  <%= submit_tag("Search") %>
-<% end %>
+<div class="container text-center">
+  <h1>Admin Dashboard</h1><br>
+  <div class="btn-group" role="group">
+    <p><%= link_to "Pending Fulfillments", admin_fulfillments_path, class: "btn btn-primary" %></p>
+    <p><%= link_to "Price Comparison Tool", admin_price_comparison_path, class: "btn btn-primary" %></p>
+  </div>
+</div>

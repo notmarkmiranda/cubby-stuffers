@@ -26,4 +26,8 @@ class User < ApplicationRecord
     end
     return user if user.save
   end
+
+  def self.fulfillment_dropdown_options
+    pluck(:email).uniq.unshift("All Users")
+  end
 end

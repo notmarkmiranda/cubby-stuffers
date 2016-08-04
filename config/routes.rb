@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :create, :show] do
     resources :cubbies, only: [:new, :create]
   end
-  resources :subscriptions, only: [:create, :show]
+  resources :subscriptions, only: [:create, :show, :index]
 
   resources :charges, only: [:new, :create]
 
@@ -18,11 +18,18 @@ Rails.application.routes.draw do
   end
 
   get "/login", to: "sessions#new"
-  post "/login", to: "sessions#create"
+  post "/login", to: "internal_sessions#create"
   delete "/logout", to: "sessions#destroy"
 
   get "/dashboard", to: "users#show"
 
   get "/auth/github", as: :github_login
-  get "/auth/github/callback", to: "sessions#create"
+  get "/auth/github/callback", to: "external_sessions#create"
+
+  namespace :api do
+    namespace :v1 do
+      get "/price-comparison/:query", to: "price_comparison#index"
+      get "/redemptions", to: "redemptions#create"
+    end
+  end
 end
