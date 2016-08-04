@@ -1,10 +1,30 @@
 @import "mixins";
 
+#logo-image {
+    width: 220;
+    height: 40px;
+}
+
+.navbar {
+    //background-color: #6AB1FB;
+    //background-color: #A1BEDB;
+}
+
+.dropdown-menu {
+    background-color: #2D4F73;
+    //background-color: #6AB1FB;
+}
+
+.navbar-brand {
+    padding-bottom: 50px;
+}
+
 body,
 html {
     width: 100%;
     height: 100%;
 }
+
 
 body,
 {

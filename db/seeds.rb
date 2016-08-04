@@ -89,8 +89,8 @@ class Seeder
       last_name: "Admin",
       email: "admin@admin.com",
       email_confirmation: "admin@admin.com",
-      password: "password",
-      password_confirmation: "password",
+      password: "get-stuffed-2016",
+      password_confirmation: "get-stuffed-2016",
       phone_number: "123-456-7890",
       role: 1
     }
