@@ -1,24 +1,26 @@
 <div class="container">
-  <h1>Price Comparison for "<%= @query %>"</h1>
+  <h1>Price Comparison <span id="query"></span></h1>
+
+  <form class="form-inline">
+    <div class="form-group search-field">
+      <input class="form-control" type="text" id="searchField" placeholder="Enter a snack!">
+    </div>
+    <input class="btn btn-primary" id="searchSubmit" type="button" name="submit" value="Search">
+  </form>
+
+
   <table class="price_comparison_table table table-striped">
      <thead>
       <tr>
         <th>Image</th>
         <th>UPC</th>
         <th>Name</th>
-        <th>Walmart Price</th>
-        <th>Amazon Price</th>
+        <th>Walmart Unit Price</th>
+        <th>Amazon Unit Price</th>
       </tr>
     </thead>
-
-    <% @walmart_products.each do |walmart_product| %>
-      <tr>
-        <td><%= image_tag walmart_product.image_path %></td>
-        <td><%= walmart_product.upc %></td>
-        <td><%= walmart_product.name %></td>
-        <td><%= link_to "$#{walmart_product.price}", walmart_product.url %></td>
-        <td><%= ProductPresenter.new(walmart_product, @amazon_products, self).matching_amazon_price %></td>
-      </tr>
-    <% end %>
+    <div id="loader"></div>
+    <tbody id="table-body"></tbody>
   </table>
+
 </div>

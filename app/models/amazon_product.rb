@@ -7,6 +7,7 @@ class AmazonProduct
     @upc = product_data.dig("ItemAttributes", "UPC")
     @prime = product_data.dig("Offers", "Offer", "OfferListing", "IsEligibleForPrime")
     @url = product_data.dig("DetailPageURL")
+    @quantity = product_data.dig("ItemAttributes", "PackageQuantity")
   end
 
   def is_prime?
