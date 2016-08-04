@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :create, :show] do
     resources :cubbies, only: [:new, :create]
   end
-  resources :subscriptions, only: [:create, :show]
+  resources :subscriptions, only: [:create, :show, :index]
 
   resources :charges, only: [:new, :create]
 

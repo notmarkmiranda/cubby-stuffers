@@ -1,10 +1,35 @@
-<h1>Your Subscription</h1>
+<h1 class='container text-center'><%= @subscription.package.name %> - <%= @subscription.mod %></h1>
 
-<ul>
-  <li>Id: <%= @subscription.id %></li>
-  <li>Price: <%= @subscription.price %></li>
-  <li>Module: <%= @subscription.mod %></li>
-  <li>Weeks: <%= @subscription.weeks %></li>
-  <li>Package: <%= @subscription.package.name %></li>
-  <li>Package Items: <%= @subscription.package.items.map(&:name).join(", ") %></li>
-</ul>
+<div class='container'>
+  <p>Id: <%= @subscription.id %></p>
+  <p>Price: <%= @subscription.price %></p>
+  <p>Module: <%= @subscription.mod %></p>
+  <p>Weeks: <%= @subscription.weeks %></p>
+  <p>Package: <%= link_to @subscription.package.name, package_path(@subscription.package) %></p>
+  <p>Package Items: <%= @subscription.package.items.map(&:name).join(", ") %></p>
+  <p>Fulfillments:</p><br>
+  <div class="container">
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th>Week</th>
+      <th>Status</th>
+    </tr>
+    </thead>
+
+    <tbody>
+      <% @subscription.fulfillments.each do |fulfillment| %>
+      <tr>
+        <td><%= fulfillment.week %></td>
+        <td><% if fulfillment.fulfilled? %>
+            Fulfilled
+            <% else %>
+            Pending
+            <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+  </table>
+  </div>
+</div>
