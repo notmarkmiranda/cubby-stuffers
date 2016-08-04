@@ -79,7 +79,6 @@ $(document).ready(function () {
         valid.push(fulfillment);
       }
 	});
-    debugger
   return valid;
   }
 
