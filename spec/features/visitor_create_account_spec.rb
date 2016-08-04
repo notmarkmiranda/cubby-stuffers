@@ -54,7 +54,7 @@ RSpec.feature "visitor can create an internal account" do
       end
 
       within("#content") do
-        expect(page).to have_content("Your Cubby: Big Workspace A1")
+        expect(page).to have_content("Your cubby is currently located at: Big Workspace A1")
       end
     end
   end

@@ -1,10 +1,10 @@
-<h1>Packages</h1>
+<h1 class='text-center'>Packages</h1>
 
-<div id='packages'>
-  <ul>
-    <% @packages.each do |package| %>
-      <li><%= link_to package.name, package_path(package) %></li>
-      <li><%= package.item_names %></li>
-    <% end %>
-  </ul>
+<div class='container' id='packages'>
+  <% @packages.each do |package| %>
+    <div class="col-md-6 text-center">
+      <h3><%= link_to package.name, package_path(package) %></h3>
+      <p><%= package.item_names %></p>
+    </div>
+  <% end %>
 </div>

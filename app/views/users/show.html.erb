@@ -1,3 +1,12 @@
-<h1>User Dashboard</h1>
+<h1 class='container text-center'>User Dashboard</h1><br>
 
-<p>Your Cubby: <%= @user.cubby ? @user.cubby.display_location  : "Sign up now!" %></p>
+<div class="container text-center">
+  <p><% if current_user.cubby %>
+      Your cubby is currently located at: <%= current_user.cubby.display_location %>
+    <% else %>
+      You still need a cubby! <%= link_to "Sign up now!", new_user_cubby_path(current_user) %>
+    <% end %>
+  <p>
+    <%= link_to "Your Subscriptions", subscriptions_path %>
+  </p>
+</div>

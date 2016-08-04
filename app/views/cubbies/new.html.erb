@@ -1,6 +1,6 @@
-<h1>Please select a cubby:</h1>
+<h1 class="container">Please select a cubby:</h1>
 
-<div class="row">
+<div class="container">
   <div>
     <%= form_for([@user, @cubby]) do |f| %>
     <%= f.label :location, "Select Cubby Location", class: :form_control %>
@@ -12,8 +12,7 @@
     <%= f.label :row, "Select Cubby Row", class: :form_control %>
     <%= f.select :row, options_for_select(Cubby.get_rows) %>
 
-    <button class="btn btn-primary"><%= f.submit "Register Cubby" %></button>
+    <%= f.submit "Register Cubby", class: "btn btn-primary" %>
     <% end %>
   </div>
 </div>
-

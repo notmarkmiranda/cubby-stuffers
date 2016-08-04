@@ -1,4 +1,4 @@
-<%= form_for @user do |f| %>
+;<%= form_for @user do |f| %>
   <div class="form-group container">
     <h4>
       <%= f.label :first_name, "First Name" %>
@@ -18,11 +18,11 @@
     </h4>
     <h4>
       <%= f.label :password, "Password" %>
-      <span><%= f.text_field :password, class: "form-control" %></span>
+      <span><%= f.password_field :password, class: "form-control" %></span>
     </h4>
     <h4>
       <%= f.label :password_confirmation, "Password Confirmation" %>
-      <span><%= f.text_field :password_confirmation, class: "form-control" %></span>
+      <span><%= f.password_field :password_confirmation, class: "form-control" %></span>
     </h4>
     <h4>
       <%= f.label :phone_number, "Phone Number" %>
