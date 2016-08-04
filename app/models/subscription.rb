@@ -12,4 +12,8 @@ class Subscription < ApplicationRecord
   def week_array
     (1..weeks).to_a
   end
+
+  def self.fulfillment_dropdown_options
+    pluck(:mod).uniq.unshift("All Modules")
+  end
 end

@@ -14,7 +14,7 @@ RSpec.feature "admin updates fulfillments spec" do
 
       expect(page).to have_content "Pending Fulfillments"
       within "#sub-id-#{subscription.id}-week-#{fulfillment.week}" do
-        click_on "Filled"
+        click_on "Pending"
       end
 
       updated_fulfillment = Fulfillment.find(fulfillment.id)
@@ -22,7 +22,7 @@ RSpec.feature "admin updates fulfillments spec" do
       expect(updated_fulfillment.fulfilled?).to eq true
 
       within "#sub-id-#{subscription.id}-week-#{fulfillment.week}" do
-        expect(page).to_not have_link("Filled")
+        expect(page).to_not have_link("Pending")
       end
     end
   end

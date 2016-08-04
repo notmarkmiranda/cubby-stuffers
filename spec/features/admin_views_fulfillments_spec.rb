@@ -20,7 +20,7 @@ RSpec.feature "admin views fulfillments spec" do
         expect(page).to have_content "Last Name"
         expect(page).to have_content "Module"
         expect(page).to have_content "Week"
-        expect(page).to have_link "Filled"
+        expect(page).to have_link "Pending"
       end
     end
   end
