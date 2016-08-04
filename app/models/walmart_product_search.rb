@@ -10,8 +10,12 @@ class WalmartProductSearch
   end
 
   def get_all
-    all_product_data.dig(:items).map do |product_data|
-      WalmartProduct.new(product_data)
+    if all_product_data.dig(:items).nil?
+      return nil
+    else
+      all_product_data.dig(:items).map do |product_data|
+        WalmartProduct.new(product_data)
+      end
     end
   end
 
