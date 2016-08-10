@@ -1,8 +1,7 @@
 class AmazonProductSearch
-  attr_reader :upcs
 
   def initialize(upcs)
-    @upcs = upcs
+    @_upcs = upcs
   end
 
   def self.get_matching(upcs)
@@ -13,10 +12,6 @@ class AmazonProductSearch
     unique_product_data.map do |product_data|
       AmazonProduct.new(product_data) 
     end
-  end
-
-  def all_product_data
-    service.get_info(upcs_list_to_string)
   end
 
   def unique_product_data
@@ -33,7 +28,17 @@ class AmazonProductSearch
     upcs.join(",")
   end
 
+  private
+
+  def all_product_data
+    @_all_product_data ||= service.get_info(upcs_list_to_string)
+  end
+
   def service
-    @service ||= AmazonService.new
+    @_service ||= AmazonService.new
+  end
+
+  def upcs
+    @_upcs
   end
 end
