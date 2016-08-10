@@ -15,8 +15,7 @@ describe AmazonService do
       expect(item["ItemAttributes"]["UPC"]).to eq(upc)
       expect(item["ItemAttributes"]["Feature"][1]).to eq("Irresistible snacking")
       expect(item["OfferSummary"]["LowestNewPrice"]["FormattedPrice"]).to eq("$3.40")
-      expect(item["Offers"]["Offer"]["OfferListing"]["IsEligibleForPrime"]).to eq("1")
-      expect(item["EditorialReviews"]["EditorialReview"]["Content"]).to eq("This is one of those snacks we predict will disappear quickly.  So good ahead and enjoy the crunch of these oven-roasted almonds.  The flavor-packed combination is also a good source of protein to help you get up and go")
+      expect(item["EditorialReviews"]["EditorialReview"]["Content"]).to eq("This is one of those snacks we predict will disappear quickly.  So go ahead and enjoy the crunch of these oven roasted almonds.  The flavor packed combination is also a good source of protein to help you get up and go.")
     end
 
     it "returns item price for the given item upc" do
